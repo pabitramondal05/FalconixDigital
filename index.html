@@ -121,7 +121,9 @@
                             gold: '#fdbd10',
                             red: '#dc2626',
                             orange: '#ea580c',
-                            yellow: '#eab308'
+                            yellow: '#eab308',
+                            cyberGreen: '#10b981',
+                            cyberPurple: '#8b5cf6'
                         }
                     },
                     fontFamily: {
@@ -244,10 +246,11 @@
     <main id="main-content">
         
         <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center">
-            <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-50 w-full h-full"></canvas>
+            <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-60 w-full h-full"></canvas>
 
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-red rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse z-0"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-gold rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse z-0" style="animation-delay: 2s;"></div>
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600 rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse z-0"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-cyberGreen rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse z-0" style="animation-delay: 2s;"></div>
+            <div class="absolute top-1/2 left-1/2 w-96 h-96 bg-red-600 rounded-full mix-blend-screen filter blur-[120px] opacity-10 animate-pulse z-0" style="animation-delay: 4s;"></div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center fade-in-up">
                 <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-extrabold tracking-tight mb-6">
@@ -269,7 +272,7 @@
         </section>
 
         <section id="about" class="py-20 bg-brand-card relative overflow-hidden">
-            <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-30 w-full h-full"></canvas>
+            <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-40 w-full h-full"></canvas>
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -317,7 +320,7 @@
         </section>
 
         <section id="services" class="py-24 bg-brand-dark relative overflow-hidden">
-            <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-30 w-full h-full"></canvas>
+            <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-40 w-full h-full"></canvas>
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
@@ -385,7 +388,7 @@
         </section>
 
         <section id="portfolio" class="py-24 bg-brand-card relative overflow-hidden">
-            <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-30 w-full h-full"></canvas>
+            <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-40 w-full h-full"></canvas>
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
@@ -444,7 +447,7 @@
         </section>
 
         <section class="py-20 bg-brand-dark relative border-y border-brand-border overflow-hidden">
-            <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-30 w-full h-full"></canvas>
+            <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-40 w-full h-full"></canvas>
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -507,7 +510,7 @@
         </section>
 
         <section id="pricing" class="py-24 bg-brand-card relative overflow-hidden">
-            <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-30 w-full h-full"></canvas>
+            <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-40 w-full h-full"></canvas>
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
@@ -579,7 +582,7 @@
         </section>
 
         <section class="py-20 bg-brand-dark overflow-hidden relative">
-            <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-30 w-full h-full"></canvas>
+            <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-40 w-full h-full"></canvas>
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <h2 class="text-center text-2xl md:text-4xl font-heading font-bold text-white mb-12 fade-in-up">Hear From Our Partners</h2>
@@ -617,7 +620,7 @@
         </section>
 
         <section class="py-20 bg-brand-card border-t border-brand-border relative overflow-hidden">
-            <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-30 w-full h-full"></canvas>
+            <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-40 w-full h-full"></canvas>
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="flex justify-between items-end mb-12 fade-in-up">
@@ -651,7 +654,6 @@
                         </div>
                     </article>
 
-                    <!-- Extra Hidden Blogs -->
                     <article class="fade-in-up hidden-post hidden">
                         <div class="group bg-brand-dark h-full rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold transition-all duration-300 flex flex-col">
                             <div class="p-6 flex-grow flex flex-col">
@@ -681,7 +683,7 @@
         </section>
 
         <section id="contact" class="py-24 bg-brand-dark relative overflow-hidden">
-            <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-30 w-full h-full"></canvas>
+            <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-40 w-full h-full"></canvas>
             
             <div class="absolute inset-0 flex justify-center items-center pointer-events-none z-0">
                 <div class="w-full max-w-3xl h-full bg-brand-red opacity-5 mix-blend-screen filter blur-[100px]"></div>
@@ -892,7 +894,7 @@
             threshold: 0.1
         };
 
-        const observer = new IntersectionObserver((entries, observer) => {
+        const generalObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
@@ -902,7 +904,7 @@
         }, observerOptions);
 
         document.querySelectorAll('.fade-in-up').forEach((elem) => {
-            observer.observe(elem);
+            generalObserver.observe(elem);
         });
 
         window.addEventListener('scroll', () => {
@@ -914,7 +916,6 @@
             }
         });
 
-        // --- Blog Post Expansion Logic ---
         const viewAllDesktop = document.getElementById('viewAllDesktop');
         const viewAllMobile = document.getElementById('viewAllMobile');
         const hiddenPosts = document.querySelectorAll('.hidden-post');
@@ -927,7 +928,7 @@
                     post.classList.remove('hidden');
                 } else {
                     post.classList.add('hidden');
-                    post.classList.remove('visible'); // Reset animation so it animates again if scrolled
+                    post.classList.remove('visible');
                 }
             });
             
@@ -942,7 +943,6 @@
         if (viewAllDesktop) viewAllDesktop.addEventListener('click', togglePosts);
         if (viewAllMobile) viewAllMobile.addEventListener('click', togglePosts);
 
-        // --- Read More Inside Container Logic ---
         const readMoreBtns = document.querySelectorAll('.read-more-btn');
         readMoreBtns.forEach(btn => {
             btn.addEventListener('click', function(e) {
@@ -959,12 +959,24 @@
             });
         });
 
-        function initParticles() {
+        function initTechnicalBg() {
             const canvases = document.querySelectorAll('.particle-canvas');
             
+            const techColors = ['#10b981', '#8b5cf6', '#ef4444']; 
+            
+            let mouse = { x: null, y: null, radius: 150 };
+            window.addEventListener('mousemove', (event) => {
+                mouse.x = event.clientX;
+                mouse.y = event.clientY;
+            });
+            window.addEventListener('mouseout', () => {
+                mouse.x = null;
+                mouse.y = null;
+            });
+
             canvases.forEach(canvas => {
                 const ctx = canvas.getContext('2d');
-                let width, height, particles = [], animationFrameId;
+                let width, height, particles = [], binaries = [], animationFrameId;
                 let isVisible = false;
 
                 function resize() {
@@ -975,15 +987,30 @@
 
                 function initParticlesArray() {
                     particles = [];
+                    binaries = [];
                     const numParticles = Math.floor((width * height) / 12000); 
+                    const numBinaries = Math.floor((width * height) / 8000);
+
                     for (let i = 0; i < numParticles; i++) {
                         particles.push({
                             x: Math.random() * width,
                             y: Math.random() * height,
-                            vx: (Math.random() - 0.5) * 0.6,
-                            vy: (Math.random() - 0.5) * 0.6,
-                            size: Math.random() * 2 + 1,
-                            color: ['#dc2626', '#ea580c', '#fdbd10'][Math.floor(Math.random() * 3)]
+                            vx: (Math.random() - 0.5) * 1.0,
+                            vy: (Math.random() - 0.5) * 1.0,
+                            size: Math.random() * 2 + 0.5,
+                            color: techColors[Math.floor(Math.random() * techColors.length)]
+                        });
+                    }
+
+                    for (let i = 0; i < numBinaries; i++) {
+                        binaries.push({
+                            x: Math.random() * width,
+                            y: Math.random() * height,
+                            speed: Math.random() * 1.5 + 0.5,
+                            value: Math.random() > 0.5 ? '1' : '0',
+                            color: techColors[Math.floor(Math.random() * techColors.length)],
+                            opacity: Math.random() * 0.6 + 0.1,
+                            fontSize: Math.floor(Math.random() * 10 + 10)
                         });
                     }
                 }
@@ -992,7 +1019,35 @@
                     if (!isVisible) return;
                     ctx.clearRect(0, 0, width, height);
                     
-                    particles.forEach(p => {
+                    const rect = canvas.getBoundingClientRect();
+                    const localMouseX = mouse.x !== null ? mouse.x - rect.left : null;
+                    const localMouseY = mouse.y !== null ? mouse.y - rect.top : null;
+
+                    ctx.font = "14px monospace";
+                    ctx.textAlign = "center";
+                    for (let i = 0; i < binaries.length; i++) {
+                        let b = binaries[i];
+                        
+                        ctx.fillStyle = b.color;
+                        ctx.globalAlpha = b.opacity;
+                        ctx.font = `${b.fontSize}px monospace`;
+                        ctx.fillText(b.value, b.x, b.y);
+                        
+                        b.y += b.speed;
+                        
+                        if (Math.random() < 0.02) {
+                            b.value = b.value === '1' ? '0' : '1';
+                        }
+                        
+                        if (b.y > height + 20) {
+                            b.y = -20;
+                            b.x = Math.random() * width;
+                        }
+                    }
+                    ctx.globalAlpha = 1.0; 
+
+                    for(let i = 0; i < particles.length; i++) {
+                        let p = particles[i];
                         p.x += p.vx;
                         p.y += p.vy;
                         
@@ -1003,20 +1058,47 @@
                         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
                         ctx.fillStyle = p.color;
                         ctx.fill();
-                    });
 
-                    for(let i = 0; i < particles.length; i++) {
+                        if (localMouseX !== null && localMouseY !== null) {
+                            let dxMouse = p.x - localMouseX;
+                            let dyMouse = p.y - localMouseY;
+                            let distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
+                            
+                            if (distMouse < mouse.radius) {
+                                ctx.beginPath();
+                                const opacity = 0.5 - (distMouse / mouse.radius) * 0.5;
+                                ctx.strokeStyle = p.color.replace(')', `, ${opacity})`).replace('rgb', 'rgba'); // Make line match particle color roughly, using default fillStyle hex below
+                                ctx.strokeStyle = `${p.color}${Math.floor(opacity * 255).toString(16).padStart(2, '0')}`; // Hex with alpha
+                                
+                                ctx.lineWidth = 1;
+                                ctx.moveTo(p.x, p.y);
+                                ctx.lineTo(localMouseX, localMouseY);
+                                ctx.stroke();
+                                
+                                const forceDirectionX = dxMouse / distMouse;
+                                const forceDirectionY = dyMouse / distMouse;
+                                const force = (mouse.radius - distMouse) / mouse.radius;
+                                
+                                if (distMouse < 100) {
+                                    p.x += forceDirectionX * force * 0.8;
+                                    p.y += forceDirectionY * force * 0.8;
+                                }
+                            }
+                        }
+
                         for(let j = i + 1; j < particles.length; j++) {
-                            const dx = particles[i].x - particles[j].x;
-                            const dy = particles[i].y - particles[j].y;
-                            const dist = Math.sqrt(dx*dx + dy*dy);
+                            let p2 = particles[j];
+                            let dx = p.x - p2.x;
+                            let dy = p.y - p2.y;
+                            let dist = Math.sqrt(dx*dx + dy*dy);
                             
                             if(dist < 120) {
                                 ctx.beginPath();
-                                ctx.strokeStyle = `rgba(253, 189, 16, ${0.15 - dist/800})`;
-                                ctx.lineWidth = 0.5;
-                                ctx.moveTo(particles[i].x, particles[i].y);
-                                ctx.lineTo(particles[j].x, particles[j].y);
+                                const opacity = 0.25 - (dist / 480);
+                                ctx.strokeStyle = `${p.color}${Math.floor(opacity * 255).toString(16).padStart(2, '0')}`;
+                                ctx.lineWidth = 0.6;
+                                ctx.moveTo(p.x, p.y);
+                                ctx.lineTo(p2.x, p2.y);
                                 ctx.stroke();
                             }
                         }
@@ -1026,7 +1108,7 @@
 
                 window.addEventListener('resize', resize);
                 resize();
-
+                
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
@@ -1043,7 +1125,7 @@
             });
         }
         
-        window.addEventListener('DOMContentLoaded', initParticles);
+        window.addEventListener('DOMContentLoaded', initTechnicalBg);
     </script>
 </body>
 </html>
