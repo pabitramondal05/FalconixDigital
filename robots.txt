@@ -1,0 +1,16 @@
+robots.txt for https://www.google.com/search?q=https://falconixdigital.netlify.app/
+
+Allow all web crawlers to access the entire site
+
+User-agent: *
+Allow: /
+
+Disallow access to potential backend or sensitive directories (if you add them later)
+
+Disallow: /admin/
+
+Disallow: /private/
+
+Point search engines directly to the XML sitemap
+
+Sitemap: https://www.google.com/search?q=https://falconixdigital.netlify.app/sitemap.xml
