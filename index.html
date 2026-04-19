@@ -9,16 +9,16 @@
     <meta name="keywords" content="website developer, website designer, web development services, website design company, build a website, create website for business, affordable website developer, professional website services, small business website developer, freelance web developer, website for lawyers, lawyer website developer, law firm website design, advocate website India, legal website design services, website for advocates in India, law firm online presence, attorney website developer, website developer near me, web designer in Bihar, website developer India, affordable website developer India, local web designer near me, website developer Mithapur, website development cost India, website price in India, affordable website under 5000, cheap website developer, website development packages, low cost website design, website with booking system, appointment booking website, website with blog, SEO optimized website, mobile responsive website, fast loading website, business website with contact form, how to get clients online, business not getting customers, need online presence for business, how to grow law firm online, how to appear on Google search, how to get leads from website, how to create a website, what is website development, why business needs website, benefits of website for lawyers, how website helps business, FalconixDigital, FalconixDigital website services, FalconixDigital reviews, FalconixDigital portfolio, why lawyers need a website, website vs social media for business, how websites bring clients, SEO tips for beginners, how to rank website on Google, affordable website developer for lawyers in India, best website developer for small business near me, website design for advocates with booking system, low cost website development for startups, how to create business website step by step, hire website developer, book website service, get website today, contact web developer, start website project, alternatives to Wix website builder, better than WordPress developer, custom website vs template, HTML CSS website developer, JavaScript web developer, Supabase website backend, Firebase website developer, professional web developer India, trusted website designer, experienced web developer, reliable website services, website for tuition teacher, website for gym business, website for shop owner, website for doctor clinic, website for freelancer">
     <meta name="author" content="Pabitra Mondal - Falconix Digital">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://falconixdigital.com/">
+    <link rel="canonical" href="https://falconixdigital.netlify.app/">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://falconixdigital.com/">
+    <meta property="og:url" content="https://falconixdigital.netlify.app/">
     <meta property="og:title" content="Best Website Design Company for Small Business & Lawyers | Falconix Digital">
     <meta property="og:description" content="Looking for a cheap website developer near you? We build custom, mobile-responsive, and SEO-optimized websites. Get your business or law firm online today!">
     <meta property="og:image" content="https://i.ibb.co/n80NN2gZ/Falconix-Digital-Logo.png">
 
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://falconixdigital.com/">
+    <meta property="twitter:url" content="https://falconixdigital.netlify.app/">
     <meta property="twitter:title" content="Professional Web Developer India | Affordable Website Design Packages">
     <meta property="twitter:description" content="Grow your law firm or startup online. Get a fast, SEO-ready website with a booking system. Better than WordPress or Wix templates. Contact us!">
     <meta property="twitter:image" content="https://i.ibb.co/n80NN2gZ/Falconix-Digital-Logo.png">
@@ -32,22 +32,22 @@
       "@graph": [
         {
           "@type": "WebSite",
-          "@id": "https://falconixdigital.com/#website",
-          "url": "https://falconixdigital.com/",
+          "@id": "https://falconixdigital.netlify.app/#website",
+          "url": "https://falconixdigital.netlify.app/",
           "name": "Falconix Digital",
           "alternateName": ["FalconixDigital", "Falconix Digital Web Development"],
           "description": "Affordable Websites That Bring You Clients",
           "potentialAction": [{
             "@type": "SearchAction",
-            "target": "https://falconixdigital.com/?s={search_term_string}",
+            "target": "https://falconixdigital.netlify.app/?s={search_term_string}",
             "query-input": "required name=search_term_string"
           }]
         },
         {
           "@type": "ProfessionalService",
-          "@id": "https://falconixdigital.com/#organization",
+          "@id": "https://falconixdigital.netlify.app/#organization",
           "name": "Falconix Digital",
-          "url": "https://falconixdigital.com/",
+          "url": "https://falconixdigital.netlify.app/",
           "logo": "https://i.ibb.co/n80NN2gZ/Falconix-Digital-Logo.png",
           "image": "https://i.ibb.co/n80NN2gZ/Falconix-Digital-Logo.png",
           "description": "We are a professional website developer in India building affordable, SEO optimized, and high-converting websites for lawyers, small businesses, startups, and freelancers.",
@@ -71,7 +71,7 @@
           "@type": "Service",
           "serviceType": "Web Design Services",
           "provider": {
-            "@id": "https://falconixdigital.com/#organization"
+            "@id": "https://falconixdigital.netlify.app/#organization"
           },
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
@@ -625,36 +625,57 @@
                         <h2 class="text-brand-gold font-semibold tracking-wider uppercase mb-2">Digital Insights</h2>
                         <h3 class="text-3xl font-heading font-bold text-white">Latest from our Blog</h3>
                     </div>
-                    <a href="#" class="hidden md:inline-block text-brand-orange hover:text-brand-gold transition-colors font-semibold">View All Posts <i class="fas fa-arrow-right ml-1"></i></a>
+                    <button id="viewAllDesktop" class="hidden md:inline-block text-brand-orange hover:text-brand-gold transition-colors font-semibold">View All Posts <i class="fas fa-arrow-down ml-1"></i></button>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="blogContainer">
                     <article class="fade-in-up">
-                        <a href="#" class="group block h-full">
-                            <div class="bg-brand-dark h-full rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold transition-all duration-300">
-                                <div class="p-6">
-                                    <span class="text-brand-red text-xs font-bold uppercase tracking-wider mb-2 block">For Lawyers</span>
-                                    <h4 class="text-xl font-bold text-white group-hover:text-brand-gold transition-colors mb-3">Why Every Lawyer Needs a Professional Website in 2026</h4>
-                                    <p class="text-gray-400 text-sm line-clamp-2">In the digital age, your reputation precedes you online. Learn how a secure, optimized website serves as your 24/7 digital reception...</p>
-                                </div>
+                        <div class="group bg-brand-dark h-full rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold transition-all duration-300 flex flex-col">
+                            <div class="p-6 flex-grow flex flex-col">
+                                <span class="text-brand-red text-xs font-bold uppercase tracking-wider mb-2 block">For Lawyers</span>
+                                <h4 class="text-xl font-bold text-white group-hover:text-brand-gold transition-colors mb-3">Why Every Lawyer Needs a Professional Website in 2026</h4>
+                                <p class="text-gray-400 text-sm line-clamp-2 transition-all duration-300 blog-text mb-4">In the digital age, your reputation precedes you online. Learn how a secure, optimized website serves as your 24/7 digital reception. Beyond simply listing your services, a well-designed site builds trust with prospective clients through case studies, client testimonials, and secure communication portals. It sets the foundation for your firm's authority before a client even walks through the door.</p>
+                                <button class="text-brand-gold text-sm font-semibold hover:text-brand-orange transition-colors read-more-btn mt-auto self-start flex items-center">Read More <i class="fas fa-chevron-down ml-1 text-[10px]"></i></button>
                             </div>
-                        </a>
+                        </div>
                     </article>
                     
                     <article class="fade-in-up">
-                        <a href="#" class="group block h-full">
-                            <div class="bg-brand-dark h-full rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold transition-all duration-300">
-                                <div class="p-6">
-                                    <span class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2 block">Business Growth</span>
-                                    <h4 class="text-xl font-bold text-white group-hover:text-brand-gold transition-colors mb-3">How a Modern Website Brings Clients on Autopilot</h4>
-                                    <p class="text-gray-400 text-sm line-clamp-2">Stop chasing leads manually. Discover the mechanics of converting web traffic into paying clients through smart design and SEO...</p>
-                                </div>
+                        <div class="group bg-brand-dark h-full rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold transition-all duration-300 flex flex-col">
+                            <div class="p-6 flex-grow flex flex-col">
+                                <span class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2 block">Business Growth</span>
+                                <h4 class="text-xl font-bold text-white group-hover:text-brand-gold transition-colors mb-3">How a Modern Website Brings Clients on Autopilot</h4>
+                                <p class="text-gray-400 text-sm line-clamp-2 transition-all duration-300 blog-text mb-4">Stop chasing leads manually. Discover the mechanics of converting web traffic into paying clients through smart design and SEO. A modern website acts as a powerful marketing engine that filters unqualified leads and drives high-intent customers straight to your booking page. By leveraging clear call-to-actions and fast load times, your business can generate revenue even while you sleep.</p>
+                                <button class="text-brand-gold text-sm font-semibold hover:text-brand-orange transition-colors read-more-btn mt-auto self-start flex items-center">Read More <i class="fas fa-chevron-down ml-1 text-[10px]"></i></button>
                             </div>
-                        </a>
+                        </div>
+                    </article>
+
+                    <!-- Extra Hidden Blogs -->
+                    <article class="fade-in-up hidden-post hidden">
+                        <div class="group bg-brand-dark h-full rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold transition-all duration-300 flex flex-col">
+                            <div class="p-6 flex-grow flex flex-col">
+                                <span class="text-brand-yellow text-xs font-bold uppercase tracking-wider mb-2 block">Startups</span>
+                                <h4 class="text-xl font-bold text-white group-hover:text-brand-gold transition-colors mb-3">Bootstrap Your Startup's Online Presence</h4>
+                                <p class="text-gray-400 text-sm line-clamp-2 transition-all duration-300 blog-text mb-4">Launching a startup is challenging enough without worrying about complex coding. Learn the essential elements of an MVP website that captures early adopters. From collecting email signups for your waitlist to displaying a crisp, responsive landing page, prioritizing the right features can save you thousands of dollars while still presenting a premium brand image to investors.</p>
+                                <button class="text-brand-gold text-sm font-semibold hover:text-brand-orange transition-colors read-more-btn mt-auto self-start flex items-center">Read More <i class="fas fa-chevron-down ml-1 text-[10px]"></i></button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="fade-in-up hidden-post hidden">
+                        <div class="group bg-brand-dark h-full rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold transition-all duration-300 flex flex-col">
+                            <div class="p-6 flex-grow flex flex-col">
+                                <span class="text-[#25D366] text-xs font-bold uppercase tracking-wider mb-2 block">Local SEO</span>
+                                <h4 class="text-xl font-bold text-white group-hover:text-brand-gold transition-colors mb-3">Dominate Your Local City Search Results</h4>
+                                <p class="text-gray-400 text-sm line-clamp-2 transition-all duration-300 blog-text mb-4">For local businesses like clinics and gyms, ranking on Google Maps is critical. We break down the absolute basics of local SEO to get foot traffic. Ensuring your website has local keywords, consistent NAP (Name, Address, Phone) data, and is seamlessly linked to your Google Business Profile will guarantee you show up when customers in your area are actively searching for your services.</p>
+                                <button class="text-brand-gold text-sm font-semibold hover:text-brand-orange transition-colors read-more-btn mt-auto self-start flex items-center">Read More <i class="fas fa-chevron-down ml-1 text-[10px]"></i></button>
+                            </div>
+                        </div>
                     </article>
                 </div>
                 <div class="mt-8 text-center md:hidden">
-                    <a href="#" class="text-brand-orange hover:text-brand-gold transition-colors font-semibold">View All Posts <i class="fas fa-arrow-right ml-1"></i></a>
+                    <button id="viewAllMobile" class="text-brand-orange hover:text-brand-gold transition-colors font-semibold">View All Posts <i class="fas fa-arrow-down ml-1"></i></button>
                 </div>
             </div>
         </section>
@@ -776,9 +797,9 @@
                     &copy; 2026 <span class="text-gradient font-semibold">Falconix Digital</span>. All rights reserved.
                 </p>
                 <div class="flex space-x-4 text-sm text-gray-500">
-                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
                     <span>|</span>
-                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -823,13 +844,36 @@
 
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
+            
+            const name = document.getElementById('userName').value;
+            const phone = document.getElementById('userPhone').value;
+            const message = document.getElementById('userMessage').value;
+            
+            const text = `Hello Falconix Digital,\n\nName: ${name}\nPhone: ${phone}\nMessage: ${message}`;
+            const encodedText = encodeURIComponent(text);
+            const targetPhone = "918637028337";
+            
             const btn = this.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Redirecting...';
             btn.classList.add('opacity-75', 'cursor-not-allowed');
             
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            
+            if (isMobile) {
+                const now = Date.now();
+                setTimeout(() => {
+                    if (Date.now() - now < 600) {
+                        window.location.href = `sms:+${targetPhone}?body=${encodedText}`;
+                    }
+                }, 500);
+                window.location.href = `whatsapp://send?phone=${targetPhone}&text=${encodedText}`;
+            } else {
+                window.open(`https://wa.me/${targetPhone}?text=${encodedText}`, '_blank');
+            }
+            
             setTimeout(() => {
-                btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                btn.innerHTML = '<i class="fas fa-check"></i> Redirected!';
                 btn.classList.remove('bg-gradient-brand', 'hover:bg-gradient-brand-hover');
                 btn.classList.add('bg-green-600', 'hover:bg-green-700');
                 this.reset();
@@ -839,7 +883,7 @@
                     btn.classList.remove('bg-green-600', 'hover:bg-green-700', 'opacity-75', 'cursor-not-allowed');
                     btn.classList.add('bg-gradient-brand', 'hover:bg-gradient-brand-hover');
                 }, 3000);
-            }, 1500);
+            }, 2000);
         });
 
         const observerOptions = {
@@ -868,6 +912,51 @@
             } else {
                 nav.classList.remove('shadow-lg');
             }
+        });
+
+        // --- Blog Post Expansion Logic ---
+        const viewAllDesktop = document.getElementById('viewAllDesktop');
+        const viewAllMobile = document.getElementById('viewAllMobile');
+        const hiddenPosts = document.querySelectorAll('.hidden-post');
+        let postsExpanded = false;
+
+        function togglePosts() {
+            postsExpanded = !postsExpanded;
+            hiddenPosts.forEach(post => {
+                if (postsExpanded) {
+                    post.classList.remove('hidden');
+                } else {
+                    post.classList.add('hidden');
+                    post.classList.remove('visible'); // Reset animation so it animates again if scrolled
+                }
+            });
+            
+            const btnText = postsExpanded 
+                ? 'Show Less <i class="fas fa-arrow-up ml-1"></i>' 
+                : 'View All Posts <i class="fas fa-arrow-down ml-1"></i>';
+            
+            if (viewAllDesktop) viewAllDesktop.innerHTML = btnText;
+            if (viewAllMobile) viewAllMobile.innerHTML = btnText;
+        }
+
+        if (viewAllDesktop) viewAllDesktop.addEventListener('click', togglePosts);
+        if (viewAllMobile) viewAllMobile.addEventListener('click', togglePosts);
+
+        // --- Read More Inside Container Logic ---
+        const readMoreBtns = document.querySelectorAll('.read-more-btn');
+        readMoreBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const textContainer = this.parentElement.querySelector('.blog-text');
+                
+                if (textContainer.classList.contains('line-clamp-2')) {
+                    textContainer.classList.remove('line-clamp-2');
+                    this.innerHTML = 'Read Less <i class="fas fa-chevron-up ml-1 text-[10px]"></i>';
+                } else {
+                    textContainer.classList.add('line-clamp-2');
+                    this.innerHTML = 'Read More <i class="fas fa-chevron-down ml-1 text-[10px]"></i>';
+                }
+            });
         });
 
         function initParticles() {
