@@ -115,15 +115,16 @@
                 extend: {
                     colors: {
                         brand: {
-                            dark: '#0a0a0a',
-                            card: '#141416',
-                            border: '#2a2a2a',
-                            gold: '#fdbd10',
-                            red: '#dc2626',
-                            orange: '#ea580c',
-                            yellow: '#eab308',
-                            cyberGreen: '#39FF14',
-                            cyberPurple: '#D500F9'
+                            dark: '#0B1120',
+                            card: '#111827',
+                            border: '#1F2937',
+                            accent: '#3B82F6',
+                            accentLight: '#60A5FA',
+                            red: '#EF4444',
+                            orange: '#F97316',
+                            yellow: '#F59E0B',
+                            green: '#10B981',
+                            purple: '#8B5CF6'
                         }
                     },
                     fontFamily: {
@@ -131,10 +132,10 @@
                         body: ['Open Sans', 'sans-serif'],
                     },
                     backgroundImage: {
-                        'gradient-brand': 'linear-gradient(to right, #7c3aed, #3b82f6, #dc2626, #fdbd10)',
-                        'gradient-brand-hover': 'linear-gradient(to right, #6d28d9, #2563eb, #b91c1c, #ca8a04)',
-                        'gradient-premium': 'linear-gradient(to right, #9333ea, #dc2626, #fdbd10)',
-                        'gradient-premium-hover': 'linear-gradient(to right, #7e22ce, #b91c1c, #ca8a04)',
+                        'gradient-brand': 'linear-gradient(135deg, #2563EB, #06B6D4)',
+                        'gradient-brand-hover': 'linear-gradient(135deg, #1D4ED8, #0891B2)',
+                        'gradient-premium': 'linear-gradient(135deg, #4F46E5, #8B5CF6, #3B82F6)',
+                        'gradient-premium-hover': 'linear-gradient(135deg, #4338CA, #7C3AED, #2563EB)',
                     }
                 }
             }
@@ -143,12 +144,12 @@
 
     <style>
         body {
-            background-color: #0a0a0a;
+            background-color: #0B1120;
             color: #f3f4f6;
         }
         
         .text-gradient {
-            background: linear-gradient(to right, #7c3aed, #3b82f6, #dc2626, #fdbd10);
+            background: linear-gradient(to right, #60A5FA, #A78BFA, #38BDF8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -156,7 +157,7 @@
         }
 
         .logo-gradient {
-            background: linear-gradient(to right, #dc2626, #ea580c, #fdbd10);
+            background: linear-gradient(to right, #F8FAFC, #93C5FD);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -175,8 +176,8 @@
         }
 
         @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 15px rgba(253, 189, 16, 0.4); }
-            50% { box-shadow: 0 0 25px rgba(253, 189, 16, 0.8); }
+            0%, 100% { box-shadow: 0 0 15px rgba(59, 130, 246, 0.4); }
+            50% { box-shadow: 0 0 25px rgba(59, 130, 246, 0.8); }
         }
         .fab-btn {
             animation: pulse-glow 3s infinite;
@@ -204,7 +205,7 @@
             z-index: 1;
         }
         .shimmer-standard::before {
-            background: linear-gradient(to right, transparent, rgba(253, 189, 16, 0.15), transparent);
+            background: linear-gradient(to right, transparent, rgba(59, 130, 246, 0.15), transparent);
             animation: shimmer 3.5s infinite linear 1.5s;
         }
     </style>
@@ -212,23 +213,23 @@
 <body class="font-body antialiased overflow-x-hidden">
 
     <header>
-        <nav class="fixed w-full z-50 bg-brand-dark/60 backdrop-blur-2xl border-b border-brand-border transition-all duration-300" id="navbar">
+        <nav class="fixed w-full z-50 bg-brand-dark/80 backdrop-blur-2xl border-b border-brand-border transition-all duration-300" id="navbar">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-20">
                     <div class="flex-shrink-0 flex items-center gap-3">
-                        <img src="https://i.ibb.co/n80NN2gZ/Falconix-Digital-Logo.png" alt="Falconix Digital Logo" class="h-12 w-12 rounded-full object-cover border border-brand-gold shadow-[0_0_10px_rgba(253,189,16,0.3)]">
+                        <img src="https://i.ibb.co/n80NN2gZ/Falconix-Digital-Logo.png" alt="Falconix Digital Logo" class="h-12 w-12 rounded-full object-cover border border-brand-accent shadow-[0_0_15px_rgba(59,130,246,0.3)]">
                         <div class="flex flex-col">
                             <span class="font-heading font-bold text-xl tracking-wider logo-gradient leading-tight">FALCONIX DIGITAL</span>
-                            <span class="text-[10px] tracking-[0.2em] text-brand-gold uppercase">Innovation in Flight</span>
+                            <span class="text-[10px] tracking-[0.2em] text-brand-accentLight uppercase">Innovation in Flight</span>
                         </div>
                     </div>
 
                     <div class="hidden md:flex items-center space-x-8">
-                        <a href="#home" class="text-gray-300 hover:text-brand-gold transition-colors text-sm font-semibold tracking-wide uppercase">Home</a>
-                        <a href="#about" class="text-gray-300 hover:text-brand-gold transition-colors text-sm font-semibold tracking-wide uppercase">About</a>
-                        <a href="#services" class="text-gray-300 hover:text-brand-gold transition-colors text-sm font-semibold tracking-wide uppercase">Services</a>
-                        <a href="#portfolio" class="text-gray-300 hover:text-brand-gold transition-colors text-sm font-semibold tracking-wide uppercase">Portfolio</a>
-                        <a href="#pricing" class="text-gray-300 hover:text-brand-gold transition-colors text-sm font-semibold tracking-wide uppercase">Pricing</a>
+                        <a href="#home" class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-semibold tracking-wide uppercase">Home</a>
+                        <a href="#about" class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-semibold tracking-wide uppercase">About</a>
+                        <a href="#services" class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-semibold tracking-wide uppercase">Services</a>
+                        <a href="#portfolio" class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-semibold tracking-wide uppercase">Portfolio</a>
+                        <a href="#pricing" class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-semibold tracking-wide uppercase">Pricing</a>
                         <a href="#contact" class="bg-gradient-brand hover:bg-gradient-brand-hover text-white px-6 py-2 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg">Get Started</a>
                     </div>
 
@@ -240,14 +241,14 @@
                 </div>
             </div>
 
-            <div id="mobile-menu" class="hidden md:hidden bg-brand-dark/80 backdrop-blur-2xl border-b border-brand-border">
+            <div id="mobile-menu" class="hidden md:hidden bg-brand-dark/95 backdrop-blur-2xl border-b border-brand-border">
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a href="#home" class="block px-3 py-2 text-gray-300 hover:text-brand-gold font-medium">Home</a>
-                    <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-brand-gold font-medium">About</a>
-                    <a href="#services" class="block px-3 py-2 text-gray-300 hover:text-brand-gold font-medium">Services</a>
-                    <a href="#portfolio" class="block px-3 py-2 text-gray-300 hover:text-brand-gold font-medium">Portfolio</a>
-                    <a href="#pricing" class="block px-3 py-2 text-gray-300 hover:text-brand-gold font-medium">Pricing</a>
-                    <a href="#contact" class="block px-3 py-2 text-brand-gold font-medium">Contact Us</a>
+                    <a href="#home" class="block px-3 py-2 text-gray-300 hover:text-brand-accent font-medium">Home</a>
+                    <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-brand-accent font-medium">About</a>
+                    <a href="#services" class="block px-3 py-2 text-gray-300 hover:text-brand-accent font-medium">Services</a>
+                    <a href="#portfolio" class="block px-3 py-2 text-gray-300 hover:text-brand-accent font-medium">Portfolio</a>
+                    <a href="#pricing" class="block px-3 py-2 text-gray-300 hover:text-brand-accent font-medium">Pricing</a>
+                    <a href="#contact" class="block px-3 py-2 text-brand-accent font-medium">Contact Us</a>
                 </div>
             </div>
         </nav>
@@ -258,9 +259,9 @@
         <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center">
             <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-60 w-full h-full"></canvas>
 
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-screen filter blur-[120px] opacity-30 animate-pulse z-0"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-cyberGreen rounded-full mix-blend-screen filter blur-[120px] opacity-30 animate-pulse z-0" style="animation-delay: 2s;"></div>
-            <div class="absolute top-1/2 left-1/2 w-96 h-96 bg-red-500 rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse z-0" style="animation-delay: 4s;"></div>
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600 rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse z-0"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse z-0" style="animation-delay: 2s;"></div>
+            <div class="absolute top-1/2 left-1/2 w-96 h-96 bg-indigo-600 rounded-full mix-blend-screen filter blur-[120px] opacity-15 animate-pulse z-0" style="animation-delay: 4s;"></div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center fade-in-up">
                 <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-extrabold tracking-tight mb-6">
@@ -271,23 +272,23 @@
                     We build professional, high-converting websites for businesses, lawyers, and startups ready to take flight.
                 </p>
                 <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#pricing" class="group bg-gradient-premium hover:bg-gradient-premium-hover text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:-translate-y-1 hover:scale-105 shadow-[0_0_25px_rgba(253,189,16,0.5)] border border-brand-gold/50 flex items-center justify-center gap-3">
-                        Get Your Website <i class="fas fa-rocket text-brand-gold group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                    <a href="#pricing" class="group bg-gradient-brand hover:bg-gradient-brand-hover text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:-translate-y-1 hover:scale-105 shadow-[0_0_25px_rgba(59,130,246,0.5)] border border-brand-accentLight/30 flex items-center justify-center gap-3">
+                        Get Your Website <i class="fas fa-rocket text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
                     </a>
-                    <a href="#portfolio" class="bg-transparent border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-dark px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:-translate-y-1 flex items-center justify-center">
+                    <a href="#portfolio" class="bg-brand-card/50 backdrop-blur-md border border-brand-border text-white hover:border-brand-accent hover:text-brand-accentLight px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:-translate-y-1 flex items-center justify-center">
                         View Portfolio
                     </a>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="py-20 bg-brand-card relative overflow-hidden">
+        <section id="about" class="py-20 bg-brand-card relative overflow-hidden border-y border-brand-border/50">
             <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-40 w-full h-full"></canvas>
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div class="fade-in-up">
-                        <h2 class="text-brand-gold font-semibold tracking-wider uppercase mb-2">About Us</h2>
+                        <h2 class="text-brand-accentLight font-semibold tracking-wider uppercase mb-2">About Us</h2>
                         <h3 class="text-3xl md:text-4xl font-heading font-bold text-white mb-6">Empowering Your Business Online</h3>
                         <p class="text-gray-400 mb-4 leading-relaxed">
                             At <strong class="logo-gradient font-bold">Falconix Digital</strong>, we believe every business deserves a professional online presence without breaking the bank. We don't just design websites; we engineer digital storefronts designed to capture attention and convert visitors into loyal clients.
@@ -297,19 +298,19 @@
                         </p>
                         <ul class="space-y-3 mb-8">
                             <li class="flex items-center text-gray-300">
-                                <i class="fas fa-check-circle text-brand-orange mr-3"></i> Focus on client results, not just design
+                                <i class="fas fa-check-circle text-brand-accent mr-3"></i> Focus on client results, not just design
                             </li>
                             <li class="flex items-center text-gray-300">
-                                <i class="fas fa-check-circle text-brand-orange mr-3"></i> Specialized in Lawyers, Startups & Small Businesses
+                                <i class="fas fa-check-circle text-brand-accent mr-3"></i> Specialized in Lawyers, Startups & Small Businesses
                             </li>
                             <li class="flex items-center text-gray-300">
-                                <i class="fas fa-check-circle text-brand-orange mr-3"></i> Affordable pricing with premium quality
+                                <i class="fas fa-check-circle text-brand-accent mr-3"></i> Affordable pricing with premium quality
                             </li>
                         </ul>
                         
                         <div class="mt-8 border-t border-white/10 pt-6">
                             <p class="text-gray-400 text-sm mb-3">Led by an experienced developer with a track record of digital excellence.</p>
-                            <a href="https://pabitra-mondal-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-transparent border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-dark px-6 py-2 rounded-full font-bold text-sm transition-all shadow-[0_0_10px_rgba(253,189,16,0.1)] hover:shadow-[0_0_20px_rgba(253,189,16,0.3)]">
+                            <a href="https://pabitra-mondal-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-brand-dark border border-brand-border text-gray-300 hover:border-brand-accent hover:text-brand-accentLight px-6 py-2 rounded-full font-bold text-sm transition-all shadow-[0_0_10px_rgba(0,0,0,0.5)] hover:shadow-[0_0_20px_rgba(59,130,246,0.2)]">
                                 View Founder Portfolio (Pabitra Mondal) <i class="fas fa-external-link-alt ml-2 text-xs"></i>
                             </a>
                         </div>
@@ -334,64 +335,64 @@
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
-                    <h2 class="text-brand-gold font-semibold tracking-wider uppercase mb-2">Our Services</h2>
+                    <h2 class="text-brand-accentLight font-semibold tracking-wider uppercase mb-2">Our Services</h2>
                     <h3 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6">Everything You Need to Succeed</h3>
                     <p class="text-gray-400">We offer comprehensive web solutions tailored to your specific industry needs.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <article class="bg-gradient-to-br from-purple-900/40 to-brand-dark p-8 rounded-2xl border border-brand-border hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
-                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-purple-500 transition-colors">
-                            <i class="fas fa-laptop-code text-2xl text-purple-400"></i>
+                    <article class="bg-gradient-to-br from-indigo-900/20 to-brand-card p-8 rounded-2xl border border-brand-border hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
+                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-indigo-500 transition-colors">
+                            <i class="fas fa-laptop-code text-2xl text-indigo-400"></i>
                         </div>
                         <h4 class="text-xl font-bold text-white mb-3">Website Design</h4>
                         <p class="text-gray-400 text-sm mb-4">Stunning static and dynamic websites that load fast and look beautiful on all devices.</p>
-                        <p class="text-purple-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Professional brand image</p>
+                        <p class="text-indigo-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Professional brand image</p>
                     </article>
 
-                    <article class="bg-gradient-to-br from-green-900/40 to-brand-dark p-8 rounded-2xl border border-brand-border hover:border-green-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
-                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-green-500 transition-colors">
-                            <i class="fas fa-store text-2xl text-green-400"></i>
+                    <article class="bg-gradient-to-br from-brand-accent/20 to-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-accent transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
+                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-brand-accent transition-colors">
+                            <i class="fas fa-store text-2xl text-brand-accent"></i>
                         </div>
                         <h4 class="text-xl font-bold text-white mb-3">Business Websites</h4>
                         <p class="text-gray-400 text-sm mb-4">Complete digital setups for local businesses to showcase services and attract local customers.</p>
-                        <p class="text-green-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Get more local clients</p>
+                        <p class="text-brand-accent text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Get more local clients</p>
                     </article>
 
-                    <article class="bg-gradient-to-br from-blue-900/40 to-brand-dark p-8 rounded-2xl border border-brand-border hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
-                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-blue-500 transition-colors">
-                            <i class="fas fa-scale-balanced text-2xl text-blue-400"></i>
+                    <article class="bg-gradient-to-br from-cyan-900/20 to-brand-card p-8 rounded-2xl border border-brand-border hover:border-cyan-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
+                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-cyan-500 transition-colors">
+                            <i class="fas fa-scale-balanced text-2xl text-cyan-400"></i>
                         </div>
                         <h4 class="text-xl font-bold text-white mb-3">Lawyer Websites</h4>
                         <p class="text-gray-400 text-sm mb-4">Our specialized niche. Authoritative, secure, and professional sites designed specifically for law firms.</p>
-                        <p class="text-blue-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Build instant trust</p>
+                        <p class="text-cyan-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Build instant trust</p>
                     </article>
 
-                    <article class="bg-gradient-to-br from-red-900/40 to-brand-dark p-8 rounded-2xl border border-brand-border hover:border-red-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
-                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-red-500 transition-colors">
-                            <i class="fas fa-pen-nib text-2xl text-red-400"></i>
+                    <article class="bg-gradient-to-br from-purple-900/20 to-brand-card p-8 rounded-2xl border border-brand-border hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
+                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-purple-500 transition-colors">
+                            <i class="fas fa-pen-nib text-2xl text-purple-400"></i>
                         </div>
                         <h4 class="text-xl font-bold text-white mb-3">Blog Setup</h4>
                         <p class="text-gray-400 text-sm mb-4">Content-rich platforms customized for writers, influencers, and businesses wanting to share news.</p>
-                        <p class="text-red-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Establish authority</p>
+                        <p class="text-purple-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Establish authority</p>
                     </article>
 
-                    <article class="bg-gradient-to-br from-orange-900/40 to-brand-dark p-8 rounded-2xl border border-brand-border hover:border-orange-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
-                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-orange-500 transition-colors">
-                            <i class="fas fa-calendar-check text-2xl text-orange-400"></i>
+                    <article class="bg-gradient-to-br from-sky-900/20 to-brand-card p-8 rounded-2xl border border-brand-border hover:border-sky-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
+                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-sky-500 transition-colors">
+                            <i class="fas fa-calendar-check text-2xl text-sky-400"></i>
                         </div>
                         <h4 class="text-xl font-bold text-white mb-3">Booking Systems</h4>
                         <p class="text-gray-400 text-sm mb-4">Automated appointment scheduling integrated directly into your website for seamless client booking.</p>
-                        <p class="text-orange-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Save time & reduce friction</p>
+                        <p class="text-sky-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Save time & reduce friction</p>
                     </article>
 
-                    <article class="bg-gradient-to-br from-pink-900/40 to-brand-dark p-8 rounded-2xl border border-brand-border hover:border-pink-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
-                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-pink-500 transition-colors">
-                            <i class="fas fa-magnifying-glass-chart text-2xl text-pink-400"></i>
+                    <article class="bg-gradient-to-br from-teal-900/20 to-brand-card p-8 rounded-2xl border border-brand-border hover:border-teal-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
+                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-teal-500 transition-colors">
+                            <i class="fas fa-magnifying-glass-chart text-2xl text-teal-400"></i>
                         </div>
                         <h4 class="text-xl font-bold text-white mb-3">SEO Setup</h4>
                         <p class="text-gray-400 text-sm mb-4">On-page search engine optimization to ensure your website ranks well on Google and Bing.</p>
-                        <p class="text-pink-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Free organic traffic</p>
+                        <p class="text-teal-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Free organic traffic</p>
                     </article>
                 </div>
             </div>
@@ -402,7 +403,7 @@
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
-                    <h2 class="text-brand-gold font-semibold tracking-wider uppercase mb-2">How We Work</h2>
+                    <h2 class="text-brand-accentLight font-semibold tracking-wider uppercase mb-2">How We Work</h2>
                     <h3 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6">Our Process</h3>
                     <p class="text-gray-400">A streamlined approach from initial idea to final launch and beyond.</p>
                 </div>
@@ -410,11 +411,11 @@
                 <div class="relative max-w-4xl mx-auto before:absolute before:inset-0 before:left-5 before:-translate-x-px md:before:left-1/2 md:before:-translate-x-1/2 before:h-full before:w-1 before:bg-gradient-to-b before:from-transparent before:via-gray-700 before:to-transparent space-y-12 md:space-y-8">
                     
                     <div class="relative w-full group fade-in-up">
-                        <div class="absolute left-5 top-4 md:left-1/2 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-4 border-brand-card bg-purple-500 text-white shadow-[0_0_15px_rgba(168,85,247,0.6)] z-10 transition-transform group-hover:scale-110">
+                        <div class="absolute left-5 top-4 md:left-1/2 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-4 border-brand-card bg-indigo-500 text-white shadow-[0_0_15px_rgba(99,102,241,0.6)] z-10 transition-transform group-hover:scale-110">
                             <i class="fas fa-comments text-sm"></i>
                         </div>
-                        <div class="ml-14 md:ml-0 md:mr-auto md:w-[calc(50%-2.5rem)] rounded-2xl border border-brand-border bg-brand-dark p-6 transition-colors hover:border-purple-500 shadow-lg relative">
-                            <span class="mb-1 block text-xs font-bold uppercase tracking-wider text-purple-400">Step 1</span>
+                        <div class="ml-14 md:ml-0 md:mr-auto md:w-[calc(50%-2.5rem)] rounded-2xl border border-brand-border bg-brand-dark p-6 transition-colors hover:border-indigo-500 shadow-lg relative">
+                            <span class="mb-1 block text-xs font-bold uppercase tracking-wider text-indigo-400">Step 1</span>
                             <h4 class="mb-2 text-xl font-bold text-white">Requirement Discussion</h4>
                             <p class="text-sm text-gray-400">Understand client needs, business goals, target audience, and features required.</p>
                         </div>
@@ -432,66 +433,66 @@
                     </div>
 
                     <div class="relative w-full group fade-in-up">
-                        <div class="absolute left-5 top-4 md:left-1/2 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-4 border-brand-card bg-pink-500 text-white shadow-[0_0_15px_rgba(236,72,153,0.6)] z-10 transition-transform group-hover:scale-110">
+                        <div class="absolute left-5 top-4 md:left-1/2 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-4 border-brand-card bg-cyan-500 text-white shadow-[0_0_15px_rgba(6,182,212,0.6)] z-10 transition-transform group-hover:scale-110">
                             <i class="fas fa-paint-brush text-sm"></i>
                         </div>
-                        <div class="ml-14 md:ml-0 md:mr-auto md:w-[calc(50%-2.5rem)] rounded-2xl border border-brand-border bg-brand-dark p-6 transition-colors hover:border-pink-500 shadow-lg relative">
-                            <span class="mb-1 block text-xs font-bold uppercase tracking-wider text-pink-400">Step 3</span>
+                        <div class="ml-14 md:ml-0 md:mr-auto md:w-[calc(50%-2.5rem)] rounded-2xl border border-brand-border bg-brand-dark p-6 transition-colors hover:border-cyan-500 shadow-lg relative">
+                            <span class="mb-1 block text-xs font-bold uppercase tracking-wider text-cyan-400">Step 3</span>
                             <h4 class="mb-2 text-xl font-bold text-white">Design (UI/UX)</h4>
                             <p class="text-sm text-gray-400">Design modern, clean, and user-friendly interface (mobile responsive).</p>
                         </div>
                     </div>
 
                     <div class="relative w-full group fade-in-up">
-                        <div class="absolute left-5 top-4 md:left-1/2 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-4 border-brand-card bg-red-500 text-white shadow-[0_0_15px_rgba(239,68,68,0.6)] z-10 transition-transform group-hover:scale-110">
+                        <div class="absolute left-5 top-4 md:left-1/2 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-4 border-brand-card bg-teal-500 text-white shadow-[0_0_15px_rgba(20,184,166,0.6)] z-10 transition-transform group-hover:scale-110">
                             <i class="fas fa-code text-sm"></i>
                         </div>
-                        <div class="ml-14 md:ml-auto md:w-[calc(50%-2.5rem)] rounded-2xl border border-brand-border bg-brand-dark p-6 transition-colors hover:border-red-500 shadow-lg relative">
-                            <span class="mb-1 block text-xs font-bold uppercase tracking-wider text-red-400">Step 4</span>
+                        <div class="ml-14 md:ml-auto md:w-[calc(50%-2.5rem)] rounded-2xl border border-brand-border bg-brand-dark p-6 transition-colors hover:border-teal-500 shadow-lg relative">
+                            <span class="mb-1 block text-xs font-bold uppercase tracking-wider text-teal-400">Step 4</span>
                             <h4 class="mb-2 text-xl font-bold text-white">Development</h4>
                             <p class="text-sm text-gray-400">Convert design into a functional website using HTML, CSS, JavaScript (or required tech).</p>
                         </div>
                     </div>
 
                     <div class="relative w-full group fade-in-up">
-                        <div class="absolute left-5 top-4 md:left-1/2 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-4 border-brand-card bg-orange-500 text-white shadow-[0_0_15px_rgba(249,115,22,0.6)] z-10 transition-transform group-hover:scale-110">
+                        <div class="absolute left-5 top-4 md:left-1/2 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-4 border-brand-card bg-purple-500 text-white shadow-[0_0_15px_rgba(168,85,247,0.6)] z-10 transition-transform group-hover:scale-110">
                             <i class="fas fa-bug-slash text-sm"></i>
                         </div>
-                        <div class="ml-14 md:ml-0 md:mr-auto md:w-[calc(50%-2.5rem)] rounded-2xl border border-brand-border bg-brand-dark p-6 transition-colors hover:border-orange-500 shadow-lg relative">
-                            <span class="mb-1 block text-xs font-bold uppercase tracking-wider text-orange-400">Step 5</span>
+                        <div class="ml-14 md:ml-0 md:mr-auto md:w-[calc(50%-2.5rem)] rounded-2xl border border-brand-border bg-brand-dark p-6 transition-colors hover:border-purple-500 shadow-lg relative">
+                            <span class="mb-1 block text-xs font-bold uppercase tracking-wider text-purple-400">Step 5</span>
                             <h4 class="mb-2 text-xl font-bold text-white">Testing & Optimization</h4>
                             <p class="text-sm text-gray-400">Check performance, responsiveness, speed, and fix bugs.</p>
                         </div>
                     </div>
 
                     <div class="relative w-full group fade-in-up">
-                        <div class="absolute left-5 top-4 md:left-1/2 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-4 border-brand-card bg-yellow-500 text-white shadow-[0_0_15px_rgba(234,179,8,0.6)] z-10 transition-transform group-hover:scale-110">
+                        <div class="absolute left-5 top-4 md:left-1/2 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-4 border-brand-card bg-sky-500 text-white shadow-[0_0_15px_rgba(14,165,233,0.6)] z-10 transition-transform group-hover:scale-110">
                             <i class="fas fa-star text-sm"></i>
                         </div>
-                        <div class="ml-14 md:ml-auto md:w-[calc(50%-2.5rem)] rounded-2xl border border-brand-border bg-brand-dark p-6 transition-colors hover:border-yellow-500 shadow-lg relative">
-                            <span class="mb-1 block text-xs font-bold uppercase tracking-wider text-yellow-400">Step 6</span>
+                        <div class="ml-14 md:ml-auto md:w-[calc(50%-2.5rem)] rounded-2xl border border-brand-border bg-brand-dark p-6 transition-colors hover:border-sky-500 shadow-lg relative">
+                            <span class="mb-1 block text-xs font-bold uppercase tracking-wider text-sky-400">Step 6</span>
                             <h4 class="mb-2 text-xl font-bold text-white">Client Review</h4>
                             <p class="text-sm text-gray-400">Show demo to client, take feedback, and make final changes.</p>
                         </div>
                     </div>
 
                     <div class="relative w-full group fade-in-up">
-                        <div class="absolute left-5 top-4 md:left-1/2 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-4 border-brand-card bg-green-500 text-white shadow-[0_0_15px_rgba(34,197,94,0.6)] z-10 transition-transform group-hover:scale-110">
+                        <div class="absolute left-5 top-4 md:left-1/2 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-4 border-brand-card bg-blue-600 text-white shadow-[0_0_15px_rgba(37,99,235,0.6)] z-10 transition-transform group-hover:scale-110">
                             <i class="fas fa-rocket text-sm"></i>
                         </div>
-                        <div class="ml-14 md:ml-0 md:mr-auto md:w-[calc(50%-2.5rem)] rounded-2xl border border-brand-border bg-brand-dark p-6 transition-colors hover:border-green-500 shadow-lg relative">
-                            <span class="mb-1 block text-xs font-bold uppercase tracking-wider text-green-400">Step 7</span>
+                        <div class="ml-14 md:ml-0 md:mr-auto md:w-[calc(50%-2.5rem)] rounded-2xl border border-brand-border bg-brand-dark p-6 transition-colors hover:border-blue-600 shadow-lg relative">
+                            <span class="mb-1 block text-xs font-bold uppercase tracking-wider text-blue-400">Step 7</span>
                             <h4 class="mb-2 text-xl font-bold text-white">Deployment</h4>
                             <p class="text-sm text-gray-400">Host the website (GitHub / Netlify / custom domain setup).</p>
                         </div>
                     </div>
 
                     <div class="relative w-full group fade-in-up">
-                        <div class="absolute left-5 top-4 md:left-1/2 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-4 border-brand-card bg-teal-500 text-white shadow-[0_0_15px_rgba(20,184,166,0.6)] z-10 transition-transform group-hover:scale-110">
+                        <div class="absolute left-5 top-4 md:left-1/2 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-4 border-brand-card bg-indigo-600 text-white shadow-[0_0_15px_rgba(79,70,229,0.6)] z-10 transition-transform group-hover:scale-110">
                             <i class="fas fa-headset text-sm"></i>
                         </div>
-                        <div class="ml-14 md:ml-auto md:w-[calc(50%-2.5rem)] rounded-2xl border border-brand-border bg-brand-dark p-6 transition-colors hover:border-teal-500 shadow-lg relative">
-                            <span class="mb-1 block text-xs font-bold uppercase tracking-wider text-teal-400">Step 8</span>
+                        <div class="ml-14 md:ml-auto md:w-[calc(50%-2.5rem)] rounded-2xl border border-brand-border bg-brand-dark p-6 transition-colors hover:border-indigo-600 shadow-lg relative">
+                            <span class="mb-1 block text-xs font-bold uppercase tracking-wider text-indigo-400">Step 8</span>
                             <h4 class="mb-2 text-xl font-bold text-white">Support & Maintenance</h4>
                             <p class="text-sm text-gray-400">Provide support, updates, and future improvements if needed.</p>
                         </div>
@@ -501,14 +502,14 @@
 
                 <div class="mt-16 text-center fade-in-up hidden md:block">
                     <div class="inline-flex flex-wrap justify-center items-center gap-3 bg-brand-dark px-8 py-4 rounded-full border border-brand-border shadow-2xl text-sm font-semibold">
-                        <span class="text-purple-400">Discuss</span> <i class="fas fa-chevron-right text-gray-600 text-[10px]"></i>
+                        <span class="text-indigo-400">Discuss</span> <i class="fas fa-chevron-right text-gray-600 text-[10px]"></i>
                         <span class="text-blue-400">Plan</span> <i class="fas fa-chevron-right text-gray-600 text-[10px]"></i>
-                        <span class="text-pink-400">Design</span> <i class="fas fa-chevron-right text-gray-600 text-[10px]"></i>
-                        <span class="text-red-400">Develop</span> <i class="fas fa-chevron-right text-gray-600 text-[10px]"></i>
-                        <span class="text-orange-400">Test</span> <i class="fas fa-chevron-right text-gray-600 text-[10px]"></i>
-                        <span class="text-yellow-400">Review</span> <i class="fas fa-chevron-right text-gray-600 text-[10px]"></i>
-                        <span class="text-green-400">Launch</span> <i class="fas fa-chevron-right text-gray-600 text-[10px]"></i>
-                        <span class="text-teal-400">Support</span>
+                        <span class="text-cyan-400">Design</span> <i class="fas fa-chevron-right text-gray-600 text-[10px]"></i>
+                        <span class="text-teal-400">Develop</span> <i class="fas fa-chevron-right text-gray-600 text-[10px]"></i>
+                        <span class="text-purple-400">Test</span> <i class="fas fa-chevron-right text-gray-600 text-[10px]"></i>
+                        <span class="text-sky-400">Review</span> <i class="fas fa-chevron-right text-gray-600 text-[10px]"></i>
+                        <span class="text-blue-600">Launch</span> <i class="fas fa-chevron-right text-gray-600 text-[10px]"></i>
+                        <span class="text-indigo-600">Support</span>
                     </div>
                 </div>
 
@@ -520,54 +521,54 @@
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
-                    <h2 class="text-brand-gold font-semibold tracking-wider uppercase mb-2">Our Work</h2>
+                    <h2 class="text-brand-accentLight font-semibold tracking-wider uppercase mb-2">Our Work</h2>
                     <h3 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6">Proven Digital Success</h3>
                     <p class="text-gray-400">Take a look at some of the recent high-converting websites we've launched.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <article class="group rounded-2xl overflow-hidden border border-brand-border bg-brand-dark fade-in-up flex flex-col h-full">
-                        <div class="h-64 bg-[#1a1a1a] relative overflow-hidden">
+                    <article class="group rounded-2xl overflow-hidden border border-brand-border bg-brand-card fade-in-up flex flex-col h-full">
+                        <div class="h-64 bg-[#111827] relative overflow-hidden">
                             <img src="anjaneya-pramana.png" alt="Anjaneya Pramana Website" loading="lazy" class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-90 pointer-events-none"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent opacity-90 pointer-events-none"></div>
                         </div>
                         <div class="p-6 relative flex flex-col flex-grow">
                             <div class="mb-auto">
-                                <span class="bg-brand-gold/20 text-brand-gold text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Organization</span>
+                                <span class="bg-indigo-500/20 text-indigo-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Organization</span>
                                 <h4 class="text-xl font-bold text-white mt-4 mb-2">Anjaneya Pramana</h4>
                                 <p class="text-gray-400 text-sm mb-6">A serene and professional digital platform built for the Anjaneya Pramana organization.</p>
                             </div>
-                            <a href="https://anjaneyapramana.com/" target="_blank" rel="noopener noreferrer" class="text-brand-gold hover:text-brand-orange font-semibold text-sm flex items-center transition-colors mt-auto pt-4">Live Demo <i class="fas fa-external-link-alt ml-2 text-xs"></i></a>
+                            <a href="https://anjaneyapramana.com/" target="_blank" rel="noopener noreferrer" class="text-brand-accentLight hover:text-white font-semibold text-sm flex items-center transition-colors mt-auto pt-4">Live Demo <i class="fas fa-external-link-alt ml-2 text-xs"></i></a>
                         </div>
                     </article>
 
-                    <article class="group rounded-2xl overflow-hidden border border-brand-border bg-brand-dark fade-in-up flex flex-col h-full">
-                        <div class="h-64 bg-[#1a1a1a] relative overflow-hidden">
+                    <article class="group rounded-2xl overflow-hidden border border-brand-border bg-brand-card fade-in-up flex flex-col h-full">
+                        <div class="h-64 bg-[#111827] relative overflow-hidden">
                             <img src="physiotherapy-kgp.png" alt="Kharagpur Physiotherapy Website" loading="lazy" class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-90 pointer-events-none"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent opacity-90 pointer-events-none"></div>
                         </div>
                         <div class="p-6 relative flex flex-col flex-grow">
                             <div class="mb-auto">
-                                <span class="bg-brand-red/20 text-brand-red text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Healthcare</span>
+                                <span class="bg-teal-500/20 text-teal-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Healthcare</span>
                                 <h4 class="text-xl font-bold text-white mt-4 mb-2">Kharagpur Physiotherapy</h4>
                                 <p class="text-gray-400 text-sm mb-6">A dedicated healthcare clinic website with clear service outlines and patient booking features.</p>
                             </div>
-                            <a href="https://kharagpurphysiotherapy.in/" target="_blank" rel="noopener noreferrer" class="text-brand-gold hover:text-brand-orange font-semibold text-sm flex items-center transition-colors mt-auto pt-4">Live Demo <i class="fas fa-external-link-alt ml-2 text-xs"></i></a>
+                            <a href="https://kharagpurphysiotherapy.in/" target="_blank" rel="noopener noreferrer" class="text-brand-accentLight hover:text-white font-semibold text-sm flex items-center transition-colors mt-auto pt-4">Live Demo <i class="fas fa-external-link-alt ml-2 text-xs"></i></a>
                         </div>
                     </article>
 
-                    <article class="group rounded-2xl overflow-hidden border border-brand-border bg-brand-dark fade-in-up flex flex-col h-full">
-                        <div class="h-64 bg-[#1a1a1a] relative overflow-hidden">
+                    <article class="group rounded-2xl overflow-hidden border border-brand-border bg-brand-card fade-in-up flex flex-col h-full">
+                        <div class="h-64 bg-[#111827] relative overflow-hidden">
                             <img src="gully-scorer.png" alt="Gully Scorer Web App" loading="lazy" class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-90 pointer-events-none"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent opacity-90 pointer-events-none"></div>
                         </div>
                         <div class="p-6 relative flex flex-col flex-grow">
                             <div class="mb-auto">
-                                <span class="bg-brand-orange/20 text-brand-orange text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Web App</span>
+                                <span class="bg-blue-500/20 text-blue-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Web App</span>
                                 <h4 class="text-xl font-bold text-white mt-4 mb-2">Gully Scorer</h4>
                                 <p class="text-gray-400 text-sm mb-6">A dynamic web application designed for scoring local cricket matches with real-time tracking.</p>
                             </div>
-                            <a href="https://gullyscorer.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-brand-gold hover:text-brand-orange font-semibold text-sm flex items-center transition-colors mt-auto pt-4">Live Demo <i class="fas fa-external-link-alt ml-2 text-xs"></i></a>
+                            <a href="https://gullyscorer.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-brand-accentLight hover:text-white font-semibold text-sm flex items-center transition-colors mt-auto pt-4">Live Demo <i class="fas fa-external-link-alt ml-2 text-xs"></i></a>
                         </div>
                     </article>
                 </div>
@@ -580,16 +581,16 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div class="fade-in-up">
-                        <img src="why-businesses-choose-us.png" alt="Why Choose Us" loading="lazy" class="rounded-2xl shadow-[0_0_30px_rgba(234,88,12,0.2)] w-full max-w-md mx-auto lg:mx-0">
+                        <img src="why-businesses-choose-us.png" alt="Why Choose Us" loading="lazy" class="rounded-2xl shadow-[0_0_30px_rgba(59,130,246,0.15)] w-full max-w-md mx-auto lg:mx-0">
                     </div>
                     <div class="fade-in-up">
-                        <h2 class="text-brand-gold font-semibold tracking-wider uppercase mb-2">The Falconix Advantage</h2>
+                        <h2 class="text-brand-accentLight font-semibold tracking-wider uppercase mb-2">The Falconix Advantage</h2>
                         <h3 class="text-3xl md:text-4xl font-heading font-bold text-white mb-8">Why Businesses Choose Us</h3>
                         
                         <div class="space-y-6">
                             <div class="flex items-start">
                                 <div class="flex-shrink-0 mt-1">
-                                    <div class="w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center text-brand-gold">
+                                    <div class="w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center text-brand-accent">
                                         <i class="fas fa-wallet"></i>
                                     </div>
                                 </div>
@@ -600,7 +601,7 @@
                             </div>
                             <div class="flex items-start">
                                 <div class="flex-shrink-0 mt-1">
-                                    <div class="w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center text-brand-gold">
+                                    <div class="w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center text-brand-accent">
                                         <i class="fas fa-bolt"></i>
                                     </div>
                                 </div>
@@ -611,7 +612,7 @@
                             </div>
                             <div class="flex items-start">
                                 <div class="flex-shrink-0 mt-1">
-                                    <div class="w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center text-brand-gold">
+                                    <div class="w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center text-brand-accent">
                                         <i class="fas fa-headset"></i>
                                     </div>
                                 </div>
@@ -622,7 +623,7 @@
                             </div>
                             <div class="flex items-start">
                                 <div class="flex-shrink-0 mt-1">
-                                    <div class="w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center text-brand-gold">
+                                    <div class="w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center text-brand-accent">
                                         <i class="fas fa-mobile-screen-button"></i>
                                     </div>
                                 </div>
@@ -642,40 +643,40 @@
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
-                    <h2 class="text-brand-gold font-semibold tracking-wider uppercase mb-2">Simple Pricing</h2>
+                    <h2 class="text-brand-accentLight font-semibold tracking-wider uppercase mb-2">Simple Pricing</h2>
                     <h3 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6">Invest in Your Growth</h3>
                     <p class="text-gray-400">Clear, transparent packages designed to filter out confusion and get straight to value.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <article class="bg-gradient-to-br from-[#1f0909] to-brand-dark border-t-2 border-t-brand-red border-x border-b border-brand-border rounded-2xl p-8 flex flex-col relative fade-in-up shadow-[0_5px_15px_rgba(220,38,38,0.1)]">
+                    <article class="bg-brand-dark border-t-2 border-t-brand-border border-x border-b border-brand-border rounded-2xl p-8 flex flex-col relative fade-in-up shadow-[0_5px_15px_rgba(0,0,0,0.3)]">
                         <h4 class="text-xl font-bold text-white mb-2 relative z-10">Basic</h4>
                         <p class="text-gray-400 text-sm mb-6 relative z-10">Perfect for establishing an online footprint.</p>
                         <div class="mb-6 relative z-10">
                             <span class="text-4xl font-bold text-white">₹3k - ₹5k</span>
                         </div>
                         <ul class="space-y-4 mb-8 flex-1 relative z-10">
-                            <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-brand-red mr-3"></i> 1-3 Page Static Website</li>
-                            <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-brand-red mr-3"></i> Mobile Responsive Design</li>
-                            <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-brand-red mr-3"></i> Contact Form Integration</li>
-                            <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-brand-red mr-3"></i> Basic Speed Optimization</li>
+                            <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-gray-500 mr-3"></i> 1-3 Page Static Website</li>
+                            <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-gray-500 mr-3"></i> Mobile Responsive Design</li>
+                            <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-gray-500 mr-3"></i> Contact Form Integration</li>
+                            <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-gray-500 mr-3"></i> Basic Speed Optimization</li>
                         </ul>
-                        <a href="#contact" class="relative z-10 w-full block text-center bg-brand-red/10 border border-brand-red text-white py-3 rounded-xl font-semibold transition-colors hover:bg-brand-red">Choose Basic</a>
+                        <a href="#contact" class="relative z-10 w-full block text-center bg-transparent border border-brand-border text-white py-3 rounded-xl font-semibold transition-colors hover:bg-brand-border hover:text-white">Choose Basic</a>
                     </article>
 
                     <article class="relative fade-in-up h-full transform md:-translate-y-4">
-                        <div class="bg-gradient-to-br from-[#2a1100] to-brand-dark border-t-4 border-t-brand-orange border-x border-b border-brand-border rounded-2xl p-8 flex flex-col h-full shadow-[0_15px_35px_rgba(234,88,12,0.15)] relative shimmer-effect shimmer-standard">
+                        <div class="bg-gradient-to-br from-blue-900/10 to-brand-dark border-t-4 border-t-brand-accent border-x border-b border-brand-border rounded-2xl p-8 flex flex-col h-full shadow-[0_15px_35px_rgba(59,130,246,0.1)] relative shimmer-effect shimmer-standard">
                             <h4 class="text-xl font-bold text-white mb-2 relative z-10">Standard</h4>
                             <p class="text-gray-400 text-sm mb-6 relative z-10">Ideal for growing businesses needing clients.</p>
                             <div class="mb-6 relative z-10">
-                                <span class="text-4xl font-bold text-brand-orange">₹8k - ₹12k</span>
+                                <span class="text-4xl font-bold text-brand-accentLight">₹8k - ₹12k</span>
                             </div>
                             <ul class="space-y-4 mb-8 flex-1 relative z-10">
-                                <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-brand-orange mr-3"></i> Up to 10 Pages (Dynamic)</li>
-                                <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-brand-orange mr-3"></i> Premium UI/UX Design</li>
-                                <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-brand-orange mr-3"></i> SEO Setup (Google Visibility)</li>
-                                <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-brand-orange mr-3"></i> WhatsApp & Call Integration</li>
-                                <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-brand-orange mr-3"></i> 1 Month Free Support</li>
+                                <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-brand-accent mr-3"></i> Up to 10 Pages (Dynamic)</li>
+                                <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-brand-accent mr-3"></i> Premium UI/UX Design</li>
+                                <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-brand-accent mr-3"></i> SEO Setup (Google Visibility)</li>
+                                <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-brand-accent mr-3"></i> WhatsApp & Call Integration</li>
+                                <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-brand-accent mr-3"></i> 1 Month Free Support</li>
                             </ul>
                             <a href="#contact" class="relative z-10 w-full block text-center bg-gradient-brand hover:bg-gradient-brand-hover text-white py-3 rounded-xl font-bold transition-all shadow-lg hover:scale-105">Choose Standard</a>
                         </div>
@@ -683,12 +684,12 @@
                     </article>
 
                     <article class="relative fade-in-up h-full transform md:-translate-y-2 hover:-translate-y-4 transition-transform duration-300">
-                        <div class="absolute inset-0 bg-gradient-premium rounded-2xl blur-xl opacity-40"></div>
+                        <div class="absolute inset-0 bg-gradient-premium rounded-2xl blur-xl opacity-30"></div>
                         
                         <div class="bg-brand-dark border-x border-b border-brand-border rounded-2xl p-8 flex flex-col h-full relative shimmer-effect shadow-2xl overflow-hidden">
                             <div class="absolute top-0 left-0 w-full h-1 bg-gradient-premium z-20"></div>
                             
-                            <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-brand-red/10 to-brand-gold/20 rounded-2xl pointer-events-none z-0"></div>
+                            <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/10 via-purple-600/5 to-brand-accent/10 rounded-2xl pointer-events-none z-0"></div>
                             
                             <h4 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-premium mb-2 relative z-10">Premium</h4>
                             <p class="text-gray-300 text-sm mb-6 relative z-10">Full digital powerhouse for serious brands.</p>
@@ -696,18 +697,18 @@
                                 <span class="text-4xl font-bold text-white">₹15k+</span>
                             </div>
                             <ul class="space-y-4 mb-8 flex-1 relative z-10">
-                                <li class="flex items-center text-gray-200 text-sm"><i class="fas fa-check text-brand-gold mr-3"></i> Unlimited Pages & Blog Setup</li>
-                                <li class="flex items-center text-gray-200 text-sm"><i class="fas fa-check text-brand-gold mr-3"></i> Backend/Database Integration</li>
-                                <li class="flex items-center text-gray-200 text-sm"><i class="fas fa-check text-brand-gold mr-3"></i> Appointment Booking Systems</li>
-                                <li class="flex items-center text-gray-200 text-sm"><i class="fas fa-check text-brand-gold mr-3"></i> Advanced SEO & Analytics</li>
-                                <li class="flex items-center text-gray-200 text-sm"><i class="fas fa-check text-brand-gold mr-3"></i> E-commerce / Payment Gateway</li>
+                                <li class="flex items-center text-gray-200 text-sm"><i class="fas fa-check text-purple-400 mr-3"></i> Unlimited Pages & Blog Setup</li>
+                                <li class="flex items-center text-gray-200 text-sm"><i class="fas fa-check text-purple-400 mr-3"></i> Backend/Database Integration</li>
+                                <li class="flex items-center text-gray-200 text-sm"><i class="fas fa-check text-purple-400 mr-3"></i> Appointment Booking Systems</li>
+                                <li class="flex items-center text-gray-200 text-sm"><i class="fas fa-check text-purple-400 mr-3"></i> Advanced SEO & Analytics</li>
+                                <li class="flex items-center text-gray-200 text-sm"><i class="fas fa-check text-purple-400 mr-3"></i> E-commerce / Payment Gateway</li>
                             </ul>
-                            <a href="#contact" class="relative z-10 w-full block text-center bg-gradient-premium text-white py-3 rounded-xl font-bold transition-all shadow-[0_0_20px_rgba(220,38,38,0.4)] hover:bg-gradient-premium-hover hover:scale-105 hover:shadow-[0_0_30px_rgba(220,38,38,0.6)]">Custom Quote</a>
+                            <a href="#contact" class="relative z-10 w-full block text-center bg-gradient-premium text-white py-3 rounded-xl font-bold transition-all shadow-[0_0_20px_rgba(79,70,229,0.4)] hover:bg-gradient-premium-hover hover:scale-105 hover:shadow-[0_0_30px_rgba(79,70,229,0.6)]">Custom Quote</a>
                         </div>
                     </article>
                 </div>
                 
-                <p class="text-center text-gray-500 mt-10 italic text-sm">Need something specific? <a href="#contact" class="text-brand-gold hover:underline">Custom pricing available upon request.</a></p>
+                <p class="text-center text-gray-500 mt-10 italic text-sm">Need something specific? <a href="#contact" class="text-brand-accent hover:underline">Custom pricing available upon request.</a></p>
             </div>
         </section>
 
@@ -722,12 +723,12 @@
                         <i class="fas fa-quote-left text-4xl text-brand-border absolute top-6 left-6 opacity-50"></i>
                         <p class="text-gray-300 italic relative z-10 mb-6 mt-4 pt-2">"Falconix Digital completely transformed our law firm's online presence. We started getting client inquiries within the first week of launch. Highly professional and affordable."</p>
                         <div class="flex items-center">
-                            <div class="w-12 h-12 bg-brand-dark rounded-full flex items-center justify-center border border-brand-gold">
-                                <span class="text-brand-gold font-bold">R</span>
+                            <div class="w-12 h-12 bg-brand-dark rounded-full flex items-center justify-center border border-brand-border">
+                                <span class="text-brand-accentLight font-bold">R</span>
                             </div>
                             <div class="ml-4">
                                 <h5 class="text-white font-bold">Rajesh Sharma</h5>
-                                <p class="text-brand-orange text-xs">Senior Advocate</p>
+                                <p class="text-brand-accent text-xs">Senior Advocate</p>
                             </div>
                         </div>
                     </article>
@@ -736,12 +737,12 @@
                         <i class="fas fa-quote-left text-4xl text-brand-border absolute top-6 left-6 opacity-50"></i>
                         <p class="text-gray-300 italic relative z-10 mb-6 mt-4 pt-2">"As a startup, budget was tight, but we needed a premium look. Falconix delivered a stunning website that looks like it cost 5x more. The booking system works flawlessly."</p>
                         <div class="flex items-center">
-                            <div class="w-12 h-12 bg-brand-dark rounded-full flex items-center justify-center border border-brand-gold">
-                                <span class="text-brand-gold font-bold">A</span>
+                            <div class="w-12 h-12 bg-brand-dark rounded-full flex items-center justify-center border border-brand-border">
+                                <span class="text-brand-accentLight font-bold">A</span>
                             </div>
                             <div class="ml-4">
                                 <h5 class="text-white font-bold">Amit Patel</h5>
-                                <p class="text-brand-orange text-xs">Founder, Jubilix</p>
+                                <p class="text-brand-accent text-xs">Founder, Jubilix</p>
                             </div>
                         </div>
                     </article>
@@ -755,59 +756,59 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="flex justify-between items-end mb-12 fade-in-up">
                     <div>
-                        <h2 class="text-brand-gold font-semibold tracking-wider uppercase mb-2">Digital Insights</h2>
+                        <h2 class="text-brand-accentLight font-semibold tracking-wider uppercase mb-2">Digital Insights</h2>
                         <h3 class="text-3xl font-heading font-bold text-white">Latest from our Blog</h3>
                     </div>
-                    <button id="viewAllDesktop" class="hidden md:inline-block text-brand-orange hover:text-brand-gold transition-colors font-semibold">View All Posts <i class="fas fa-arrow-down ml-1"></i></button>
+                    <button id="viewAllDesktop" class="hidden md:inline-block text-brand-accentLight hover:text-white transition-colors font-semibold">View All Posts <i class="fas fa-arrow-down ml-1"></i></button>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="blogContainer">
                     <article class="fade-in-up">
-                        <div class="group bg-brand-dark h-full rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold transition-all duration-300 flex flex-col">
+                        <div class="group bg-brand-dark h-full rounded-2xl overflow-hidden border border-brand-border hover:border-brand-accent transition-all duration-300 flex flex-col">
                             <div class="p-6 flex-grow flex flex-col">
-                                <span class="text-brand-red text-xs font-bold uppercase tracking-wider mb-2 block">For Lawyers</span>
-                                <h4 class="text-xl font-bold text-white group-hover:text-brand-gold transition-colors mb-3">Why Every Lawyer Needs a Professional Website in 2026</h4>
+                                <span class="text-indigo-400 text-xs font-bold uppercase tracking-wider mb-2 block">For Lawyers</span>
+                                <h4 class="text-xl font-bold text-white group-hover:text-brand-accentLight transition-colors mb-3">Why Every Lawyer Needs a Professional Website in 2026</h4>
                                 <p class="text-gray-400 text-sm line-clamp-2 transition-all duration-300 blog-text mb-4">In the digital age, your reputation precedes you online. Learn how a secure, optimized website serves as your 24/7 digital reception. Beyond simply listing your services, a well-designed site builds trust with prospective clients through case studies, client testimonials, and secure communication portals. It sets the foundation for your firm's authority before a client even walks through the door.</p>
-                                <button class="text-brand-gold text-sm font-semibold hover:text-brand-orange transition-colors read-more-btn mt-auto self-start flex items-center">Read More <i class="fas fa-chevron-down ml-1 text-[10px]"></i></button>
+                                <button class="text-brand-accentLight text-sm font-semibold hover:text-white transition-colors read-more-btn mt-auto self-start flex items-center">Read More <i class="fas fa-chevron-down ml-1 text-[10px]"></i></button>
                             </div>
                         </div>
                     </article>
                     
                     <article class="fade-in-up">
-                        <div class="group bg-brand-dark h-full rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold transition-all duration-300 flex flex-col">
+                        <div class="group bg-brand-dark h-full rounded-2xl overflow-hidden border border-brand-border hover:border-brand-accent transition-all duration-300 flex flex-col">
                             <div class="p-6 flex-grow flex flex-col">
-                                <span class="text-brand-orange text-xs font-bold uppercase tracking-wider mb-2 block">Business Growth</span>
-                                <h4 class="text-xl font-bold text-white group-hover:text-brand-gold transition-colors mb-3">How a Modern Website Brings Clients on Autopilot</h4>
+                                <span class="text-brand-accent text-xs font-bold uppercase tracking-wider mb-2 block">Business Growth</span>
+                                <h4 class="text-xl font-bold text-white group-hover:text-brand-accentLight transition-colors mb-3">How a Modern Website Brings Clients on Autopilot</h4>
                                 <p class="text-gray-400 text-sm line-clamp-2 transition-all duration-300 blog-text mb-4">Stop chasing leads manually. Discover the mechanics of converting web traffic into paying clients through smart design and SEO. A modern website acts as a powerful marketing engine that filters unqualified leads and drives high-intent customers straight to your booking page. By leveraging clear call-to-actions and fast load times, your business can generate revenue even while you sleep.</p>
-                                <button class="text-brand-gold text-sm font-semibold hover:text-brand-orange transition-colors read-more-btn mt-auto self-start flex items-center">Read More <i class="fas fa-chevron-down ml-1 text-[10px]"></i></button>
+                                <button class="text-brand-accentLight text-sm font-semibold hover:text-white transition-colors read-more-btn mt-auto self-start flex items-center">Read More <i class="fas fa-chevron-down ml-1 text-[10px]"></i></button>
                             </div>
                         </div>
                     </article>
 
                     <article class="fade-in-up hidden-post hidden">
-                        <div class="group bg-brand-dark h-full rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold transition-all duration-300 flex flex-col">
+                        <div class="group bg-brand-dark h-full rounded-2xl overflow-hidden border border-brand-border hover:border-brand-accent transition-all duration-300 flex flex-col">
                             <div class="p-6 flex-grow flex flex-col">
-                                <span class="text-brand-yellow text-xs font-bold uppercase tracking-wider mb-2 block">Startups</span>
-                                <h4 class="text-xl font-bold text-white group-hover:text-brand-gold transition-colors mb-3">Bootstrap Your Startup's Online Presence</h4>
+                                <span class="text-purple-400 text-xs font-bold uppercase tracking-wider mb-2 block">Startups</span>
+                                <h4 class="text-xl font-bold text-white group-hover:text-brand-accentLight transition-colors mb-3">Bootstrap Your Startup's Online Presence</h4>
                                 <p class="text-gray-400 text-sm line-clamp-2 transition-all duration-300 blog-text mb-4">Launching a startup is challenging enough without worrying about complex coding. Learn the essential elements of an MVP website that captures early adopters. From collecting email signups for your waitlist to displaying a crisp, responsive landing page, prioritizing the right features can save you thousands of dollars while still presenting a premium brand image to investors.</p>
-                                <button class="text-brand-gold text-sm font-semibold hover:text-brand-orange transition-colors read-more-btn mt-auto self-start flex items-center">Read More <i class="fas fa-chevron-down ml-1 text-[10px]"></i></button>
+                                <button class="text-brand-accentLight text-sm font-semibold hover:text-white transition-colors read-more-btn mt-auto self-start flex items-center">Read More <i class="fas fa-chevron-down ml-1 text-[10px]"></i></button>
                             </div>
                         </div>
                     </article>
 
                     <article class="fade-in-up hidden-post hidden">
-                        <div class="group bg-brand-dark h-full rounded-2xl overflow-hidden border border-brand-border hover:border-brand-gold transition-all duration-300 flex flex-col">
+                        <div class="group bg-brand-dark h-full rounded-2xl overflow-hidden border border-brand-border hover:border-brand-accent transition-all duration-300 flex flex-col">
                             <div class="p-6 flex-grow flex flex-col">
-                                <span class="text-[#25D366] text-xs font-bold uppercase tracking-wider mb-2 block">Local SEO</span>
-                                <h4 class="text-xl font-bold text-white group-hover:text-brand-gold transition-colors mb-3">Dominate Your Local City Search Results</h4>
+                                <span class="text-teal-400 text-xs font-bold uppercase tracking-wider mb-2 block">Local SEO</span>
+                                <h4 class="text-xl font-bold text-white group-hover:text-brand-accentLight transition-colors mb-3">Dominate Your Local City Search Results</h4>
                                 <p class="text-gray-400 text-sm line-clamp-2 transition-all duration-300 blog-text mb-4">For local businesses like clinics and gyms, ranking on Google Maps is critical. We break down the absolute basics of local SEO to get foot traffic. Ensuring your website has local keywords, consistent NAP (Name, Address, Phone) data, and is seamlessly linked to your Google Business Profile will guarantee you show up when customers in your area are actively searching for your services.</p>
-                                <button class="text-brand-gold text-sm font-semibold hover:text-brand-orange transition-colors read-more-btn mt-auto self-start flex items-center">Read More <i class="fas fa-chevron-down ml-1 text-[10px]"></i></button>
+                                <button class="text-brand-accentLight text-sm font-semibold hover:text-white transition-colors read-more-btn mt-auto self-start flex items-center">Read More <i class="fas fa-chevron-down ml-1 text-[10px]"></i></button>
                             </div>
                         </div>
                     </article>
                 </div>
                 <div class="mt-8 text-center md:hidden">
-                    <button id="viewAllMobile" class="text-brand-orange hover:text-brand-gold transition-colors font-semibold">View All Posts <i class="fas fa-arrow-down ml-1"></i></button>
+                    <button id="viewAllMobile" class="text-brand-accentLight hover:text-white transition-colors font-semibold">View All Posts <i class="fas fa-arrow-down ml-1"></i></button>
                 </div>
             </div>
         </section>
@@ -816,11 +817,11 @@
             <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-40 w-full h-full"></canvas>
             
             <div class="absolute inset-0 flex justify-center items-center pointer-events-none z-0">
-                <div class="w-full max-w-3xl h-full bg-brand-red opacity-5 mix-blend-screen filter blur-[100px]"></div>
+                <div class="w-full max-w-3xl h-full bg-brand-accent opacity-10 mix-blend-screen filter blur-[100px]"></div>
             </div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="bg-gradient-to-br from-indigo-900/50 via-brand-card to-purple-900/50 border border-brand-border rounded-3xl p-8 md:p-12 shadow-[0_0_40px_rgba(124,58,237,0.15)] fade-in-up">
+                <div class="bg-gradient-to-br from-indigo-900/30 via-brand-card to-blue-900/30 border border-brand-border rounded-3xl p-8 md:p-12 shadow-[0_0_40px_rgba(59,130,246,0.1)] fade-in-up">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         
                         <div>
@@ -829,25 +830,25 @@
                             
                             <div class="space-y-6">
                                 <div class="flex items-center">
-                                    <div class="w-12 h-12 bg-brand-dark rounded-full border border-brand-border flex items-center justify-center text-brand-gold">
+                                    <div class="w-12 h-12 bg-brand-dark rounded-full border border-brand-border flex items-center justify-center text-brand-accent">
                                         <i class="fab fa-whatsapp text-xl"></i>
                                     </div>
                                     <div class="ml-4">
                                         <p class="text-sm text-gray-500 font-semibold uppercase tracking-wider">WhatsApp Us</p>
-                                        <a href="https://wa.me/918637028337" target="_blank" class="text-white hover:text-brand-gold transition-colors text-lg font-medium">+91 86370 28337</a>
+                                        <a href="https://wa.me/918637028337" target="_blank" class="text-white hover:text-brand-accentLight transition-colors text-lg font-medium">+91 86370 28337</a>
                                     </div>
                                 </div>
                                 <div class="flex items-center">
-                                    <div class="w-12 h-12 bg-brand-dark rounded-full border border-brand-border flex items-center justify-center text-brand-gold">
+                                    <div class="w-12 h-12 bg-brand-dark rounded-full border border-brand-border flex items-center justify-center text-brand-accent">
                                         <i class="fas fa-envelope text-lg"></i>
                                     </div>
                                     <div class="ml-4">
                                         <p class="text-sm text-gray-500 font-semibold uppercase tracking-wider">Email Us</p>
-                                        <a href="mailto:digitalfalconix@gmail.com" class="text-white hover:text-brand-gold transition-colors text-lg font-medium">digitalfalconix@gmail.com</a>
+                                        <a href="mailto:digitalfalconix@gmail.com" class="text-white hover:text-brand-accentLight transition-colors text-lg font-medium">digitalfalconix@gmail.com</a>
                                     </div>
                                 </div>
                                 <div class="flex items-center">
-                                    <div class="w-12 h-12 bg-brand-dark rounded-full border border-brand-border flex items-center justify-center text-brand-gold">
+                                    <div class="w-12 h-12 bg-brand-dark rounded-full border border-brand-border flex items-center justify-center text-brand-accent">
                                         <i class="fas fa-location-dot text-lg"></i>
                                     </div>
                                     <div class="ml-4">
@@ -862,18 +863,18 @@
                             <form id="contactForm" class="space-y-5">
                                 <div>
                                     <label for="userName" class="block text-sm font-medium text-gray-400 mb-1">Your Name</label>
-                                    <input type="text" id="userName" required class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors" placeholder="Pabitra Mondal">
+                                    <input type="text" id="userName" required class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors" placeholder="Pabitra Mondal">
                                 </div>
                                 <div>
                                     <label for="userPhone" class="block text-sm font-medium text-gray-400 mb-1">Phone / WhatsApp Number</label>
-                                    <input type="tel" id="userPhone" required class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors" placeholder="+91 8637028337">
+                                    <input type="tel" id="userPhone" required class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors" placeholder="+91 8637028337">
                                 </div>
                                 <div>
                                     <label for="userMessage" class="block text-sm font-medium text-gray-400 mb-1">How can we help?</label>
-                                    <textarea id="userMessage" rows="4" required class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors resize-none" placeholder="I need a website for my law firm..."></textarea>
+                                    <textarea id="userMessage" rows="4" required class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-colors resize-none" placeholder="I need a website for my law firm..."></textarea>
                                 </div>
-                                <button type="submit" class="group w-full bg-gradient-premium hover:bg-gradient-premium-hover text-white py-4 rounded-xl font-bold text-lg transition-all transform hover:-translate-y-1 hover:scale-[1.02] shadow-[0_0_25px_rgba(253,189,16,0.4)] border border-brand-gold/40 flex items-center justify-center gap-3">
-                                    Get Your Website Today <i class="fas fa-rocket text-brand-gold group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                                <button type="submit" class="group w-full bg-gradient-brand hover:bg-gradient-brand-hover text-white py-4 rounded-xl font-bold text-lg transition-all transform hover:-translate-y-1 hover:scale-[1.02] shadow-[0_0_25px_rgba(59,130,246,0.4)] border border-brand-accentLight/40 flex items-center justify-center gap-3">
+                                    Get Your Website Today <i class="fas fa-rocket text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
                                 </button>
                             </form>
                         </div>
@@ -885,7 +886,7 @@
 
     </main>
 
-    <footer class="bg-[#050505] pt-16 pb-8 border-t border-[#1a1a1a]">
+    <footer class="bg-[#050810] pt-16 pb-8 border-t border-[#1a1f2e]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <div class="col-span-1 lg:col-span-2">
@@ -895,36 +896,36 @@
                     </div>
                     <p class="text-gray-400 text-sm max-w-sm mb-6">Innovation in Flight. We design affordable, high-converting websites that bring clients directly to your business.</p>
                     <div class="flex space-x-4">
-                        <a href="https://www.instagram.com/thenameispabitra_/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram" class="w-10 h-10 rounded-full bg-brand-card flex items-center justify-center text-gray-400 hover:bg-brand-gold hover:text-brand-dark transition-all"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/pabitra-mondal-a42523292" target="_blank" rel="noopener noreferrer" aria-label="Visit our LinkedIn" class="w-10 h-10 rounded-full bg-brand-card flex items-center justify-center text-gray-400 hover:bg-brand-gold hover:text-brand-dark transition-all"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Visit our Twitter" class="w-10 h-10 rounded-full bg-brand-card flex items-center justify-center text-gray-400 hover:bg-brand-gold hover:text-brand-dark transition-all"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/thenameispabitra_/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram" class="w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center text-gray-400 hover:bg-brand-accent hover:text-white transition-all"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/pabitra-mondal-a42523292" target="_blank" rel="noopener noreferrer" aria-label="Visit our LinkedIn" class="w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center text-gray-400 hover:bg-brand-accent hover:text-white transition-all"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Visit our Twitter" class="w-10 h-10 rounded-full bg-brand-card border border-brand-border flex items-center justify-center text-gray-400 hover:bg-brand-accent hover:text-white transition-all"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
 
                 <div>
                     <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">Home</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">About Us</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">Services</a></li>
-                        <li><a href="#portfolio" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">Portfolio</a></li>
-                        <li><a href="#pricing" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">Pricing</a></li>
-                        <li><a href="https://pabitra-mondal-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-brand-gold hover:text-brand-orange text-sm font-semibold transition-colors flex items-center">Founder Portfolio <i class="fas fa-external-link-alt ml-2 text-[10px]"></i></a></li>
+                        <li><a href="#home" class="text-gray-400 hover:text-brand-accentLight text-sm transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-brand-accentLight text-sm transition-colors">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-brand-accentLight text-sm transition-colors">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-brand-accentLight text-sm transition-colors">Portfolio</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-brand-accentLight text-sm transition-colors">Pricing</a></li>
+                        <li><a href="https://pabitra-mondal-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:text-brand-accentLight text-sm font-semibold transition-colors flex items-center">Founder Portfolio <i class="fas fa-external-link-alt ml-2 text-[10px]"></i></a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Top Services</h4>
                     <ul class="space-y-2">
-                        <li><a href="#services" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">Lawyer Websites</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">Business Websites</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">Booking Systems</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-brand-gold text-sm transition-colors">SEO Setup</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-brand-accentLight text-sm transition-colors">Lawyer Websites</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-brand-accentLight text-sm transition-colors">Business Websites</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-brand-accentLight text-sm transition-colors">Booking Systems</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-brand-accentLight text-sm transition-colors">SEO Setup</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="border-t border-[#1a1a1a] pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="border-t border-[#1a1f2e] pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-gray-500 text-sm text-center md:text-left">
                     &copy; 2026 <span class="logo-gradient font-semibold">Falconix Digital</span>. All rights reserved.
                 </p>
@@ -938,7 +939,7 @@
     </footer>
 
     <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-        <a href="tel:+918637028337" aria-label="Call Us directly" class="fab-btn md:hidden w-14 h-14 bg-brand-orange text-white rounded-full flex items-center justify-center text-2xl shadow-lg hover:scale-110 transition-transform">
+        <a href="tel:+918637028337" aria-label="Call Us directly" class="fab-btn md:hidden w-14 h-14 bg-brand-accent text-white rounded-full flex items-center justify-center text-2xl shadow-lg hover:scale-110 transition-transform">
             <i class="fas fa-phone-alt"></i>
         </a>
         <a href="https://wa.me/918637028337?text=Hi%20Falconix%20Digital,%20I%20need%20a%20website." aria-label="Message Us on WhatsApp" target="_blank" class="fab-btn w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-lg hover:scale-110 transition-transform">
