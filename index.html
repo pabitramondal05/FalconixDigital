@@ -131,8 +131,10 @@
                         body: ['Open Sans', 'sans-serif'],
                     },
                     backgroundImage: {
-                        'gradient-brand': 'linear-gradient(to right, #dc2626, #ea580c, #fdbd10)',
-                        'gradient-brand-hover': 'linear-gradient(to right, #b91c1c, #c2410c, #ca8a04)',
+                        'gradient-brand': 'linear-gradient(to right, #7c3aed, #4f46e5, #3b82f6)',
+                        'gradient-brand-hover': 'linear-gradient(to right, #6d28d9, #4338ca, #2563eb)',
+                        'gradient-premium': 'linear-gradient(to right, #9333ea, #dc2626, #fdbd10)',
+                        'gradient-premium-hover': 'linear-gradient(to right, #7e22ce, #b91c1c, #ca8a04)',
                     }
                 }
             }
@@ -146,6 +148,14 @@
         }
         
         .text-gradient {
+            background: linear-gradient(to right, #7c3aed, #4f46e5, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .logo-gradient {
             background: linear-gradient(to right, #dc2626, #ea580c, #fdbd10);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -208,7 +218,7 @@
                     <div class="flex-shrink-0 flex items-center gap-3">
                         <img src="https://i.ibb.co/n80NN2gZ/Falconix-Digital-Logo.png" alt="Falconix Digital Logo" class="h-12 w-12 rounded-full object-cover border border-brand-gold shadow-[0_0_10px_rgba(253,189,16,0.3)]">
                         <div class="flex flex-col">
-                            <span class="font-heading font-bold text-xl tracking-wider text-gradient leading-tight">FALCONIX DIGITAL</span>
+                            <span class="font-heading font-bold text-xl tracking-wider logo-gradient leading-tight">FALCONIX DIGITAL</span>
                             <span class="text-[10px] tracking-[0.2em] text-brand-gold uppercase">Innovation in Flight</span>
                         </div>
                     </div>
@@ -261,7 +271,7 @@
                     We build professional, high-converting websites for businesses, lawyers, and startups ready to take flight.
                 </p>
                 <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#pricing" class="bg-gradient-brand hover:bg-gradient-brand-hover text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:-translate-y-1 shadow-[0_10px_20px_rgba(220,38,38,0.3)]">
+                    <a href="#pricing" class="bg-gradient-brand hover:bg-gradient-brand-hover text-white px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:-translate-y-1 shadow-[0_10px_20px_rgba(124,58,237,0.3)]">
                         Get Your Website
                     </a>
                     <a href="#portfolio" class="bg-transparent border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-dark px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:-translate-y-1">
@@ -280,7 +290,7 @@
                         <h2 class="text-brand-gold font-semibold tracking-wider uppercase mb-2">About Us</h2>
                         <h3 class="text-3xl md:text-4xl font-heading font-bold text-white mb-6">Empowering Your Business Online</h3>
                         <p class="text-gray-400 mb-4 leading-relaxed">
-                            At <strong class="text-gradient font-bold">Falconix Digital</strong>, we believe every business deserves a professional online presence without breaking the bank. We don't just design websites; we engineer digital storefronts designed to capture attention and convert visitors into loyal clients.
+                            At <strong class="logo-gradient font-bold">Falconix Digital</strong>, we believe every business deserves a professional online presence without breaking the bank. We don't just design websites; we engineer digital storefronts designed to capture attention and convert visitors into loyal clients.
                         </p>
                         <p class="text-gray-400 mb-6 leading-relaxed">
                             Whether you are a law firm needing a trustworthy corporate site, a startup looking for dynamic booking systems, or a local business ready to expand, our mission is simple: deliver result-driven websites that fuel your growth.
@@ -330,58 +340,58 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <article class="bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-orange transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
-                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-brand-gold transition-colors">
-                            <i class="fas fa-laptop-code text-2xl text-brand-gold"></i>
+                    <article class="bg-gradient-to-br from-purple-900/40 to-brand-dark p-8 rounded-2xl border border-brand-border hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
+                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-purple-500 transition-colors">
+                            <i class="fas fa-laptop-code text-2xl text-purple-400"></i>
                         </div>
                         <h4 class="text-xl font-bold text-white mb-3">Website Design</h4>
                         <p class="text-gray-400 text-sm mb-4">Stunning static and dynamic websites that load fast and look beautiful on all devices.</p>
-                        <p class="text-brand-orange text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Professional brand image</p>
+                        <p class="text-purple-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Professional brand image</p>
                     </article>
 
-                    <article class="bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-orange transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
-                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-brand-gold transition-colors">
-                            <i class="fas fa-store text-2xl text-brand-gold"></i>
+                    <article class="bg-gradient-to-br from-green-900/40 to-brand-dark p-8 rounded-2xl border border-brand-border hover:border-green-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
+                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-green-500 transition-colors">
+                            <i class="fas fa-store text-2xl text-green-400"></i>
                         </div>
                         <h4 class="text-xl font-bold text-white mb-3">Business Websites</h4>
                         <p class="text-gray-400 text-sm mb-4">Complete digital setups for local businesses to showcase services and attract local customers.</p>
-                        <p class="text-brand-orange text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Get more local clients</p>
+                        <p class="text-green-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Get more local clients</p>
                     </article>
 
-                    <article class="bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-orange transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
-                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-brand-gold transition-colors">
-                            <i class="fas fa-scale-balanced text-2xl text-brand-gold"></i>
+                    <article class="bg-gradient-to-br from-blue-900/40 to-brand-dark p-8 rounded-2xl border border-brand-border hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
+                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-blue-500 transition-colors">
+                            <i class="fas fa-scale-balanced text-2xl text-blue-400"></i>
                         </div>
                         <h4 class="text-xl font-bold text-white mb-3">Lawyer Websites</h4>
                         <p class="text-gray-400 text-sm mb-4">Our specialized niche. Authoritative, secure, and professional sites designed specifically for law firms.</p>
-                        <p class="text-brand-orange text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Build instant trust</p>
+                        <p class="text-blue-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Build instant trust</p>
                     </article>
 
-                    <article class="bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-orange transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
-                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-brand-gold transition-colors">
-                            <i class="fas fa-pen-nib text-2xl text-brand-gold"></i>
+                    <article class="bg-gradient-to-br from-red-900/40 to-brand-dark p-8 rounded-2xl border border-brand-border hover:border-red-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
+                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-red-500 transition-colors">
+                            <i class="fas fa-pen-nib text-2xl text-red-400"></i>
                         </div>
                         <h4 class="text-xl font-bold text-white mb-3">Blog Setup</h4>
                         <p class="text-gray-400 text-sm mb-4">Content-rich platforms customized for writers, influencers, and businesses wanting to share news.</p>
-                        <p class="text-brand-orange text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Establish authority</p>
+                        <p class="text-red-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Establish authority</p>
                     </article>
 
-                    <article class="bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-orange transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
-                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-brand-gold transition-colors">
-                            <i class="fas fa-calendar-check text-2xl text-brand-gold"></i>
+                    <article class="bg-gradient-to-br from-orange-900/40 to-brand-dark p-8 rounded-2xl border border-brand-border hover:border-orange-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
+                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-orange-500 transition-colors">
+                            <i class="fas fa-calendar-check text-2xl text-orange-400"></i>
                         </div>
                         <h4 class="text-xl font-bold text-white mb-3">Booking Systems</h4>
                         <p class="text-gray-400 text-sm mb-4">Automated appointment scheduling integrated directly into your website for seamless client booking.</p>
-                        <p class="text-brand-orange text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Save time & reduce friction</p>
+                        <p class="text-orange-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Save time & reduce friction</p>
                     </article>
 
-                    <article class="bg-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-orange transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
-                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-brand-gold transition-colors">
-                            <i class="fas fa-magnifying-glass-chart text-2xl text-brand-gold"></i>
+                    <article class="bg-gradient-to-br from-pink-900/40 to-brand-dark p-8 rounded-2xl border border-brand-border hover:border-pink-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
+                        <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-pink-500 transition-colors">
+                            <i class="fas fa-magnifying-glass-chart text-2xl text-pink-400"></i>
                         </div>
                         <h4 class="text-xl font-bold text-white mb-3">SEO Setup</h4>
                         <p class="text-gray-400 text-sm mb-4">On-page search engine optimization to ensure your website ranks well on Google and Bing.</p>
-                        <p class="text-brand-orange text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Free organic traffic</p>
+                        <p class="text-pink-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Free organic traffic</p>
                     </article>
                 </div>
             </div>
@@ -555,14 +565,14 @@
                     </article>
 
                     <article class="relative fade-in-up h-full transform md:-translate-y-2 hover:-translate-y-4 transition-transform duration-300">
-                        <div class="absolute inset-0 bg-gradient-brand rounded-2xl blur-xl opacity-40"></div>
+                        <div class="absolute inset-0 bg-gradient-premium rounded-2xl blur-xl opacity-40"></div>
                         
                         <div class="bg-brand-dark border-x border-b border-brand-border rounded-2xl p-8 flex flex-col h-full relative shimmer-effect shadow-2xl overflow-hidden">
-                            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-brand z-20"></div>
+                            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-premium z-20"></div>
                             
-                            <div class="absolute inset-0 bg-gradient-to-br from-brand-red/20 via-brand-orange/10 to-brand-gold/20 rounded-2xl pointer-events-none z-0"></div>
+                            <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-brand-red/10 to-brand-gold/20 rounded-2xl pointer-events-none z-0"></div>
                             
-                            <h4 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-brand mb-2 relative z-10">Premium</h4>
+                            <h4 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-premium mb-2 relative z-10">Premium</h4>
                             <p class="text-gray-300 text-sm mb-6 relative z-10">Full digital powerhouse for serious brands.</p>
                             <div class="mb-6 relative z-10">
                                 <span class="text-4xl font-bold text-white">₹15k+</span>
@@ -574,7 +584,7 @@
                                 <li class="flex items-center text-gray-200 text-sm"><i class="fas fa-check text-brand-gold mr-3"></i> Advanced SEO & Analytics</li>
                                 <li class="flex items-center text-gray-200 text-sm"><i class="fas fa-check text-brand-gold mr-3"></i> E-commerce / Payment Gateway</li>
                             </ul>
-                            <a href="#contact" class="relative z-10 w-full block text-center bg-gradient-brand text-white py-3 rounded-xl font-bold transition-all shadow-[0_0_20px_rgba(234,88,12,0.4)] hover:scale-105 hover:shadow-[0_0_30px_rgba(234,88,12,0.6)]">Custom Quote</a>
+                            <a href="#contact" class="relative z-10 w-full block text-center bg-gradient-premium text-white py-3 rounded-xl font-bold transition-all shadow-[0_0_20px_rgba(220,38,38,0.4)] hover:bg-gradient-premium-hover hover:scale-105 hover:shadow-[0_0_30px_rgba(220,38,38,0.6)]">Custom Quote</a>
                         </div>
                     </article>
                 </div>
@@ -763,7 +773,7 @@
                 <div class="col-span-1 lg:col-span-2">
                     <div class="flex items-center gap-3 mb-4">
                         <img src="https://i.ibb.co/n80NN2gZ/Falconix-Digital-Logo.png" alt="Logo" loading="lazy" class="h-10 w-10 rounded-full object-cover">
-                        <span class="font-heading font-bold text-xl text-gradient">FALCONIX DIGITAL</span>
+                        <span class="font-heading font-bold text-xl logo-gradient">FALCONIX DIGITAL</span>
                     </div>
                     <p class="text-gray-400 text-sm max-w-sm mb-6">Innovation in Flight. We design affordable, high-converting websites that bring clients directly to your business.</p>
                     <div class="flex space-x-4">
@@ -798,7 +808,7 @@
 
             <div class="border-t border-[#1a1a1a] pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-gray-500 text-sm text-center md:text-left">
-                    &copy; 2026 <span class="text-gradient font-semibold">Falconix Digital</span>. All rights reserved.
+                    &copy; 2026 <span class="logo-gradient font-semibold">Falconix Digital</span>. All rights reserved.
                 </p>
                 <div class="flex space-x-4 text-sm text-gray-500">
                     <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
@@ -819,5 +829,5 @@
     </div>
 
 <script src="falconix-digital.js"></script>
-</body>
+</body> 
 </html>
