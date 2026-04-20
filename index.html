@@ -208,55 +208,9 @@
             background: linear-gradient(to right, transparent, rgba(59, 130, 246, 0.15), transparent);
             animation: shimmer 3.5s infinite linear 1.5s;
         }
-
-        .bg-grid {
-            background-size: 50px 50px;
-            background-image: 
-                linear-gradient(to right, rgba(59, 130, 246, 0.04) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
-            position: fixed;
-            inset: 0;
-            z-index: -2;
-            pointer-events: none;
-            mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
-            -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
-            animation: grid-scroll-flat 20s linear infinite;
-        }
-
-        .cyber-grid-perspective {
-            position: fixed;
-            bottom: 0;
-            left: -50%;
-            width: 200%;
-            height: 100vh;
-            background-image: 
-                linear-gradient(rgba(59, 130, 246, 0.2) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(59, 130, 246, 0.2) 1px, transparent 1px);
-            background-size: 60px 60px;
-            transform-origin: bottom center;
-            transform: perspective(400px) rotateX(65deg) scale(1.2);
-            z-index: -1;
-            pointer-events: none;
-            mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 60%);
-            -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 60%);
-            animation: grid-scroll-3d 4s linear infinite;
-        }
-
-        @keyframes grid-scroll-flat {
-            0% { background-position: 0 0; }
-            100% { background-position: 50px 50px; }
-        }
-
-        @keyframes grid-scroll-3d {
-            0% { background-position: 0px 0px; }
-            100% { background-position: 0px 60px; }
-        }
     </style>
 </head>
 <body class="font-body antialiased overflow-x-hidden">
-
-    <div class="bg-grid"></div>
-    <div class="cyber-grid-perspective"></div>
 
     <header>
         <nav class="fixed w-full z-50 bg-brand-dark/80 backdrop-blur-2xl border-b border-brand-border transition-all duration-300" id="navbar">
