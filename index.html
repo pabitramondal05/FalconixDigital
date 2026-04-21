@@ -207,16 +207,6 @@
             background: linear-gradient(to right, transparent, rgba(59, 130, 246, 0.15), transparent);
             animation: shimmer 3.5s infinite linear 1.5s;
         }
-        
-        .section-heading:hover .sublink-icon {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        .sublink-icon {
-            opacity: 0;
-            transform: translateX(-10px);
-            transition: all 0.3s ease;
-        }
     </style>
 </head>
 <body class="font-body antialiased overflow-x-hidden">
@@ -240,12 +230,6 @@
                         <a href="#portfolio" class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-semibold tracking-wide uppercase">Portfolio</a>
                         <a href="#pricing" class="text-gray-300 hover:text-brand-accent transition-colors text-sm font-semibold tracking-wide uppercase">Pricing</a>
                         
-                        <form action="https://www.google.com/search" method="get" target="_blank" class="hidden lg:flex items-center bg-brand-card border border-brand-border rounded-full px-4 py-1.5 focus-within:border-brand-accent transition-colors">
-                            <input type="hidden" name="as_sitesearch" value="falconixdigital.netlify.app">
-                            <input type="text" name="q" placeholder="Search site..." required class="bg-transparent text-gray-300 text-sm outline-none w-24 focus:w-32 transition-all placeholder-gray-500">
-                            <button type="submit" class="text-gray-400 hover:text-brand-accent transition-colors"><i class="fas fa-search text-xs"></i></button>
-                        </form>
-
                         <a href="#contact" class="bg-gradient-brand hover:bg-gradient-brand-hover text-white px-6 py-2 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg">Get Started</a>
                     </div>
 
@@ -259,12 +243,6 @@
 
             <div id="mobile-menu" class="hidden md:hidden bg-brand-dark/95 backdrop-blur-2xl border-b border-brand-border h-screen overflow-y-auto pb-24">
                 <div class="px-4 pt-4 pb-6 space-y-2">
-                    <form action="https://www.google.com/search" method="get" target="_blank" class="flex items-center bg-brand-card border border-brand-border rounded-lg px-4 py-3 mb-4">
-                        <input type="hidden" name="as_sitesearch" value="falconixdigital.netlify.app">
-                        <input type="text" name="q" placeholder="Search via Google..." required class="bg-transparent text-gray-300 w-full outline-none placeholder-gray-500">
-                        <button type="submit" class="text-gray-400"><i class="fas fa-search"></i></button>
-                    </form>
-                    
                     <a href="#home" class="block px-3 py-3 rounded-lg bg-brand-card/50 text-gray-300 hover:text-brand-accent hover:bg-brand-card font-medium border border-transparent hover:border-brand-border transition-all">Home</a>
                     <a href="#about" class="block px-3 py-3 rounded-lg bg-brand-card/50 text-gray-300 hover:text-brand-accent hover:bg-brand-card font-medium border border-transparent hover:border-brand-border transition-all">About</a>
                     <a href="#services" class="block px-3 py-3 rounded-lg bg-brand-card/50 text-gray-300 hover:text-brand-accent hover:bg-brand-card font-medium border border-transparent hover:border-brand-border transition-all">Services</a>
@@ -290,8 +268,15 @@
             <div class="absolute top-1/2 left-1/2 w-96 h-96 bg-indigo-600 rounded-full mix-blend-screen filter blur-[120px] opacity-15 animate-pulse z-0" style="animation-delay: 4s;"></div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center fade-in-up">
-                <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-extrabold tracking-tight mb-6 section-heading relative inline-block">
-                    <a href="#home" class="sublink-icon absolute -left-12 top-2 text-brand-accent"><i class="fas fa-link text-2xl"></i></a>
+                
+                <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-brand-card border border-brand-border mb-8 shadow-lg transform hover:scale-105 transition-transform cursor-default">
+                    <div class="flex text-brand-yellow text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <span class="text-gray-300 text-sm font-semibold tracking-wide">Rated 4.9/5 by Happy Clients</span>
+                </div>
+
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-extrabold tracking-tight mb-6">
                     <span class="block text-white">Affordable Websites That</span>
                     <span class="block mt-2 min-h-[2.5em] md:min-h-[1.2em]"><span id="typewriter-text" class="text-gradient"></span><span class="text-white font-light animate-pulse ml-1">|</span></span>
                 </h1>
@@ -327,8 +312,7 @@
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div class="fade-in-up section-heading relative">
-                        <a href="#about" class="sublink-icon absolute -left-8 top-8 text-brand-accent hidden md:block"><i class="fas fa-link text-xl"></i></a>
+                    <div class="fade-in-up">
                         <h2 class="text-brand-accentLight font-semibold tracking-wider uppercase mb-2">About Us</h2>
                         <h3 class="text-3xl md:text-4xl font-heading font-bold text-white mb-6">Empowering Your Business Online</h3>
                         <p class="text-gray-400 mb-4 leading-relaxed">
@@ -371,12 +355,34 @@
             </div>
         </section>
 
+        <section class="py-12 bg-gradient-brand relative z-20 shadow-[0_0_30px_rgba(59,130,246,0.2)]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 text-center md:divide-x md:divide-white/20">
+                    <div class="fade-in-up">
+                        <p class="text-4xl md:text-5xl font-extrabold text-white mb-2">35+</p>
+                        <p class="text-white/90 text-xs md:text-sm font-bold uppercase tracking-wider">Projects Delivered</p>
+                    </div>
+                    <div class="fade-in-up" style="transition-delay: 100ms;">
+                        <p class="text-4xl md:text-5xl font-extrabold text-white mb-2">100%</p>
+                        <p class="text-white/90 text-xs md:text-sm font-bold uppercase tracking-wider">Client Satisfaction</p>
+                    </div>
+                    <div class="fade-in-up" style="transition-delay: 200ms;">
+                        <p class="text-4xl md:text-5xl font-extrabold text-white mb-2">24/7</p>
+                        <p class="text-white/90 text-xs md:text-sm font-bold uppercase tracking-wider">Support Active</p>
+                    </div>
+                    <div class="fade-in-up" style="transition-delay: 300ms;">
+                        <p class="text-4xl md:text-5xl font-extrabold text-white mb-2">Top</p>
+                        <p class="text-white/90 text-xs md:text-sm font-bold uppercase tracking-wider">Quality Code</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="services" class="py-24 bg-brand-dark relative overflow-hidden">
             <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-40 w-full h-full"></canvas>
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up section-heading relative">
-                    <a href="#services" class="sublink-icon absolute -left-4 md:-left-8 top-8 text-brand-accent"><i class="fas fa-link text-xl"></i></a>
+                <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
                     <h2 class="text-brand-accentLight font-semibold tracking-wider uppercase mb-2">Our Services</h2>
                     <h3 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6">Everything You Need to Succeed</h3>
                     <p class="text-gray-400">We offer comprehensive web solutions tailored to your specific industry needs.</p>
@@ -444,8 +450,7 @@
             <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-40 w-full h-full"></canvas>
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up section-heading relative">
-                    <a href="#process" class="sublink-icon absolute -left-4 md:-left-8 top-8 text-brand-accent"><i class="fas fa-link text-xl"></i></a>
+                <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
                     <h2 class="text-brand-accentLight font-semibold tracking-wider uppercase mb-2">How We Work</h2>
                     <h3 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6">Our Process</h3>
                     <p class="text-gray-400">A streamlined approach from initial idea to final launch and beyond.</p>
@@ -563,8 +568,7 @@
             <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-40 w-full h-full"></canvas>
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up section-heading relative">
-                    <a href="#portfolio" class="sublink-icon absolute -left-4 md:-left-8 top-8 text-brand-accent"><i class="fas fa-link text-xl"></i></a>
+                <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
                     <h2 class="text-brand-accentLight font-semibold tracking-wider uppercase mb-2">Our Work</h2>
                     <h3 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6">Proven Digital Success</h3>
                     <p class="text-gray-400">Take a look at some of the recent high-converting websites we've launched.</p>
@@ -627,8 +631,7 @@
                     <div class="fade-in-up">
                         <img src="why-businesses-choose-us.png" alt="Why Choose Us" loading="lazy" class="rounded-2xl shadow-[0_0_30px_rgba(59,130,246,0.15)] w-full max-w-md mx-auto lg:mx-0">
                     </div>
-                    <div class="fade-in-up section-heading relative">
-                        <a href="#testimonials" class="sublink-icon absolute -left-4 md:-left-8 top-1 text-brand-accent"><i class="fas fa-link text-xl"></i></a>
+                    <div class="fade-in-up">
                         <h2 class="text-brand-accentLight font-semibold tracking-wider uppercase mb-2">The Falconix Advantage</h2>
                         <h3 class="text-3xl md:text-4xl font-heading font-bold text-white mb-8">Why Businesses Choose Us</h3>
                         
@@ -719,8 +722,7 @@
             <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-40 w-full h-full"></canvas>
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up section-heading relative">
-                    <a href="#pricing" class="sublink-icon absolute -left-4 md:-left-8 top-8 text-brand-accent"><i class="fas fa-link text-xl"></i></a>
+                <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
                     <h2 class="text-brand-accentLight font-semibold tracking-wider uppercase mb-2">Simple Pricing</h2>
                     <h3 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6">Invest in Your Growth</h3>
                     <p class="text-gray-400">Clear, transparent packages designed to filter out confusion and get straight to value.</p>
@@ -786,6 +788,16 @@
                     </article>
                 </div>
                 
+                <div class="max-w-4xl mx-auto mt-16 bg-brand-card/50 backdrop-blur-sm border border-brand-accent/30 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 fade-in-up shadow-lg hover:border-brand-accent transition-colors">
+                    <div class="w-16 h-16 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent text-3xl shrink-0">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h4 class="text-white font-bold text-xl mb-2">100% Satisfaction Guarantee</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">We don't consider the project finished until you are completely thrilled with your new website. All of our packages come with completely transparent pricing—<strong class="text-gray-300">no hidden fees, ever.</strong></p>
+                    </div>
+                </div>
+
                 <p class="text-center text-gray-500 mt-10 italic text-sm">Need something specific? <a href="#contact" class="text-brand-accent hover:underline">Custom pricing available upon request.</a></p>
             </div>
         </section>
@@ -794,9 +806,8 @@
             <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-40 w-full h-full"></canvas>
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="flex justify-between items-end mb-12 fade-in-up section-heading relative">
+                <div class="flex justify-between items-end mb-12 fade-in-up">
                     <div>
-                        <a href="#blog" class="sublink-icon absolute -left-4 md:-left-8 top-8 text-brand-accent"><i class="fas fa-link text-xl"></i></a>
                         <h2 class="text-brand-accentLight font-semibold tracking-wider uppercase mb-2">Digital Insights</h2>
                         <h3 class="text-3xl font-heading font-bold text-white">Latest from our Blog</h3>
                     </div>
@@ -856,8 +867,7 @@
 
         <section id="faq" class="py-24 bg-brand-card relative overflow-hidden border-t border-brand-border">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center mb-16 fade-in-up section-heading relative">
-                    <a href="#faq" class="sublink-icon absolute -left-4 md:-left-8 top-8 text-brand-accent"><i class="fas fa-link text-xl"></i></a>
+                <div class="text-center mb-16 fade-in-up">
                     <h2 class="text-brand-accentLight font-semibold tracking-wider uppercase mb-2">Got Questions?</h2>
                     <h3 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6">Frequently Asked Questions</h3>
                 </div>
