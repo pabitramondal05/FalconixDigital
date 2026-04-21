@@ -1,4 +1,4 @@
-        const btn = document.getElementById('mobile-menu-btn');
+const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
         const icon = btn.querySelector('i');
 
@@ -30,9 +30,16 @@
             
             const name = document.getElementById('userName').value;
             const phone = document.getElementById('userPhone').value;
+            
+            const serviceDropdown = document.getElementById('serviceInterest');
+            let service = "Not specified";
+            if (serviceDropdown && serviceDropdown.selectedIndex > 0) {
+                service = serviceDropdown.options[serviceDropdown.selectedIndex].text;
+            }
+            
             const message = document.getElementById('userMessage').value;
             
-            const text = `Hello Falconix Digital,\n\nName: ${name}\nPhone: ${phone}\nMessage: ${message}`;
+            const text = `Hello Falconix Digital,\n\nName: ${name}\nPhone: ${phone}\nService Interested In: ${service}\nMessage: ${message}`;
             const encodedText = encodeURIComponent(text);
             const targetPhone = "918637028337";
             
