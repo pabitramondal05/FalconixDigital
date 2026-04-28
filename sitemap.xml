@@ -7,31 +7,97 @@
         http://www.google.com/schemas/sitemap-image/1.1
         http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
         
-    <!-- Primary Homepage -->
     <url>
         <loc>https://falconixdigital.netlify.app/</loc>
-        <lastmod>2026-04-19</lastmod>
+        <lastmod>2026-04-28</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <!-- Google Image Extension for Logo -->
+        
+        <!-- Branding Images -->
         <image:image>
             <image:loc>https://i.ibb.co/n80NN2gZ/Falconix-Digital-Logo.png</image:loc>
             <image:title>Falconix Digital Logo</image:title>
             <image:caption>Affordable Website Developer and Design Company in India</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://falconixdigital.netlify.app/customer-satisfaction.png</image:loc>
+            <image:title>100% Client Satisfaction Emblem</image:title>
+            <image:caption>Falconix Digital guarantees 100 percent customer satisfaction for web design services</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://falconixdigital.netlify.app/why-businesses-choose-us.png</image:loc>
+            <image:title>Why Businesses Choose Falconix Digital</image:title>
+            <image:caption>Affordable pricing, fast delivery, and SEO-ready websites for local businesses</image:caption>
+        </image:image>
+
+        <!-- Portfolio Images -->
+        <image:image>
+            <image:loc>https://falconixdigital.netlify.app/wedding1.jpeg</image:loc>
+            <image:title>Wedding Photography Portfolio Website Design</image:title>
+            <image:caption>Custom web design for wedding photographers and event planners</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://falconixdigital.netlify.app/wedding2.jpeg</image:loc>
+            <image:title>Wedding Event Planner Landing Page</image:title>
+            <image:caption>High-converting landing page design for wedding services</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://falconixdigital.netlify.app/wedding3.jpeg</image:loc>
+            <image:title>Wedding Services Digital Portfolio</image:title>
+            <image:caption>Mobile-responsive website portfolio layout for weddings</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://falconixdigital.netlify.app/lawfirm1.jpeg</image:loc>
+            <image:title>Law Firm Website Design Layout</image:title>
+            <image:caption>Professional, trustworthy website design for lawyers and law firms</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://falconixdigital.netlify.app/lawfirm2.jpeg</image:loc>
+            <image:title>Advocate and Legal Services Website</image:title>
+            <image:caption>SEO optimized website for advocates to get legal clients online</image:caption>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://falconixdigital.netlify.app/mehendi.jpeg</image:loc>
+            <image:title>Mehendi Artist Booking Website</image:title>
+            <image:caption>Online portfolio and booking system for local Mehendi artists</image:caption>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://falconixdigital.netlify.app/drclinic1.jpeg</image:loc>
+            <image:title>Doctor Clinic Website Design</image:title>
+            <image:caption>Healthcare website design with appointment booking for doctor clinics</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://falconixdigital.netlify.app/drclinic2.jpeg</image:loc>
+            <image:title>Physiotherapy Clinic Digital Platform</image:title>
+            <image:caption>Clean and modern web layout for local healthcare providers</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://falconixdigital.netlify.app/drclinic3.jpeg</image:loc>
+            <image:title>Medical Services Landing Page</image:title>
+            <image:caption>Patient-friendly landing page optimized for local medical search</image:caption>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://falconixdigital.netlify.app/crypto1.jpeg</image:loc>
+            <image:title>Crypto and Finance Startup Website</image:title>
+            <image:caption>Modern, dark-mode website design for tech and finance startups</image:caption>
         </image:image>
     </url>
     
     <!-- Legal Pages -->
     <url>
         <loc>https://falconixdigital.netlify.app/privacy-policy.html</loc>
-        <lastmod>2026-04-19</lastmod>
+        <lastmod>2026-04-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     
     <url>
         <loc>https://falconixdigital.netlify.app/terms-of-service.html</loc>
-        <lastmod>2026-04-19</lastmod>
+        <lastmod>2026-04-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
