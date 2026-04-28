@@ -213,9 +213,30 @@
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #3B82F6; border-radius: 4px; }
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        @media (pointer: fine) {
+            body, a, button, input, select, textarea, .portfolio-img-container, .tilt-card, details summary {
+                cursor: none !important;
+            }
+            .custom-cursor-active {
+                transform: translate(-50%, -50%) scale(2.5) !important;
+                background-color: transparent !important;
+                border: 2px solid #60A5FA !important;
+                box-shadow: 0 0 15px rgba(96, 165, 250, 0.8) !important;
+            }
+            .custom-glow-active {
+                transform: translate(-50%, -50%) scale(1.5) !important;
+                opacity: 0.8 !important;
+            }
+        }
     </style>
 </head>
 <body class="font-body antialiased overflow-x-hidden">
+
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 w-0 bg-gradient-to-r from-blue-500 via-cyan-400 to-brand-accentLight z-[120] shadow-[0_0_10px_rgba(59,130,246,0.8)] transition-all duration-75"></div>
+
+    <div id="custom-cursor" class="fixed top-0 left-0 w-3 h-3 bg-brand-accent rounded-full pointer-events-none z-[130] transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-100 ease-out shadow-[0_0_10px_rgba(59,130,246,0.8)] hidden md:block mix-blend-screen"></div>
+    <div id="custom-cursor-glow" class="fixed top-0 left-0 w-10 h-10 bg-brand-accent/30 rounded-full pointer-events-none z-[129] transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 ease-out blur-md hidden md:block mix-blend-screen"></div>
 
     <header>
         <nav class="fixed w-full z-50 bg-brand-dark/80 backdrop-blur-2xl border-b border-brand-border transition-all duration-300" id="navbar">
@@ -365,15 +386,15 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 text-center md:divide-x md:divide-white/20">
                     <div class="fade-in-up">
-                        <p class="text-4xl md:text-5xl font-extrabold text-white mb-2">35+</p>
+                        <p class="text-4xl md:text-5xl font-extrabold text-white mb-2"><span class="counter-value" data-target="35">0</span>+</p>
                         <p class="text-white/90 text-xs md:text-sm font-bold uppercase tracking-wider">Projects Delivered</p>
                     </div>
                     <div class="fade-in-up" style="transition-delay: 100ms;">
-                        <p class="text-4xl md:text-5xl font-extrabold text-white mb-2">100%</p>
+                        <p class="text-4xl md:text-5xl font-extrabold text-white mb-2"><span class="counter-value" data-target="100">0</span>%</p>
                         <p class="text-white/90 text-xs md:text-sm font-bold uppercase tracking-wider">Client Satisfaction</p>
                     </div>
                     <div class="fade-in-up" style="transition-delay: 200ms;">
-                        <p class="text-4xl md:text-5xl font-extrabold text-white mb-2">24/7</p>
+                        <p class="text-4xl md:text-5xl font-extrabold text-white mb-2"><span class="counter-value" data-target="24">0</span>/7</p>
                         <p class="text-white/90 text-xs md:text-sm font-bold uppercase tracking-wider">Support Active</p>
                     </div>
                     <div class="fade-in-up" style="transition-delay: 300ms;">
@@ -395,7 +416,7 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <article class="bg-gradient-to-br from-indigo-900/20 to-brand-card p-8 rounded-2xl border border-brand-border hover:border-indigo-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
+                    <article class="tilt-card bg-gradient-to-br from-indigo-900/20 to-brand-card p-8 rounded-2xl border border-brand-border hover:border-indigo-500 transition-colors duration-300 group fade-in-up">
                         <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-indigo-500 transition-colors">
                             <i class="fas fa-laptop-code text-2xl text-indigo-400"></i>
                         </div>
@@ -404,7 +425,7 @@
                         <p class="text-indigo-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Professional brand image</p>
                     </article>
 
-                    <article class="bg-gradient-to-br from-brand-accent/20 to-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-accent transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
+                    <article class="tilt-card bg-gradient-to-br from-brand-accent/20 to-brand-card p-8 rounded-2xl border border-brand-border hover:border-brand-accent transition-colors duration-300 group fade-in-up">
                         <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-brand-accent transition-colors">
                             <i class="fas fa-store text-2xl text-brand-accent"></i>
                         </div>
@@ -413,7 +434,7 @@
                         <p class="text-brand-accent text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Get more local clients</p>
                     </article>
 
-                    <article class="bg-gradient-to-br from-cyan-900/20 to-brand-card p-8 rounded-2xl border border-brand-border hover:border-cyan-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
+                    <article class="tilt-card bg-gradient-to-br from-cyan-900/20 to-brand-card p-8 rounded-2xl border border-brand-border hover:border-cyan-500 transition-colors duration-300 group fade-in-up">
                         <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-cyan-500 transition-colors">
                             <i class="fas fa-scale-balanced text-2xl text-cyan-400"></i>
                         </div>
@@ -422,7 +443,7 @@
                         <p class="text-cyan-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Build instant trust</p>
                     </article>
 
-                    <article class="bg-gradient-to-br from-purple-900/20 to-brand-card p-8 rounded-2xl border border-brand-border hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
+                    <article class="tilt-card bg-gradient-to-br from-purple-900/20 to-brand-card p-8 rounded-2xl border border-brand-border hover:border-purple-500 transition-colors duration-300 group fade-in-up">
                         <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-purple-500 transition-colors">
                             <i class="fas fa-pen-nib text-2xl text-purple-400"></i>
                         </div>
@@ -431,7 +452,7 @@
                         <p class="text-purple-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Establish authority</p>
                     </article>
 
-                    <article class="bg-gradient-to-br from-sky-900/20 to-brand-card p-8 rounded-2xl border border-brand-border hover:border-sky-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
+                    <article class="tilt-card bg-gradient-to-br from-sky-900/20 to-brand-card p-8 rounded-2xl border border-brand-border hover:border-sky-500 transition-colors duration-300 group fade-in-up">
                         <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-sky-500 transition-colors">
                             <i class="fas fa-calendar-check text-2xl text-sky-400"></i>
                         </div>
@@ -440,7 +461,7 @@
                         <p class="text-sky-400 text-sm font-semibold"><i class="fas fa-arrow-right mr-2"></i>Benefit: Save time & reduce friction</p>
                     </article>
 
-                    <article class="bg-gradient-to-br from-teal-900/20 to-brand-card p-8 rounded-2xl border border-brand-border hover:border-teal-500 transition-all duration-300 transform hover:-translate-y-2 group fade-in-up">
+                    <article class="tilt-card bg-gradient-to-br from-teal-900/20 to-brand-card p-8 rounded-2xl border border-brand-border hover:border-teal-500 transition-colors duration-300 group fade-in-up">
                         <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 border border-brand-border group-hover:border-teal-500 transition-colors">
                             <i class="fas fa-magnifying-glass-chart text-2xl text-teal-400"></i>
                         </div>
@@ -719,34 +740,56 @@
 
                 <h2 class="text-center text-2xl md:text-4xl font-heading font-bold text-white mb-12 mt-20 fade-in-up">Hear From Our Partners</h2>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <article class="bg-brand-card p-8 rounded-2xl border border-brand-border relative fade-in-up">
-                        <i class="fas fa-quote-left text-4xl text-brand-border absolute top-6 left-6 opacity-50"></i>
-                        <p class="text-gray-300 italic relative z-10 mb-6 mt-4 pt-2">"Falconix Digital completely transformed our law firm's online presence. We started getting client inquiries within the first week of launch. Highly professional and affordable."</p>
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-brand-dark rounded-full flex items-center justify-center border border-brand-border">
-                                <span class="text-brand-accentLight font-bold">R</span>
+                <div class="fade-in-up">
+                    <div class="relative max-w-4xl mx-auto h-[380px] md:h-[280px]">
+                        <article class="testimonial-slide absolute inset-0 bg-brand-card p-8 md:p-12 rounded-2xl border border-brand-border opacity-100 z-10 transition-opacity duration-1000 shadow-2xl flex flex-col justify-center">
+                            <i class="fas fa-quote-left text-4xl text-brand-border absolute top-6 left-6 md:top-8 md:left-8 opacity-30"></i>
+                            <p class="text-gray-300 italic relative z-10 mb-8 mt-4 text-lg md:text-xl leading-relaxed">"Falconix Digital completely transformed our law firm's online presence. We started getting client inquiries within the first week of launch. Highly professional and affordable."</p>
+                            <div class="flex items-center">
+                                <div class="w-14 h-14 bg-brand-dark rounded-full flex items-center justify-center border-2 border-brand-accent shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+                                    <span class="text-brand-accentLight font-bold text-xl">R</span>
+                                </div>
+                                <div class="ml-4">
+                                    <h5 class="text-white font-bold text-lg">Rajesh Sharma</h5>
+                                    <p class="text-brand-accent text-sm">Senior Advocate</p>
+                                </div>
                             </div>
-                            <div class="ml-4">
-                                <h5 class="text-white font-bold">Rajesh Sharma</h5>
-                                <p class="text-brand-accent text-xs">Senior Advocate</p>
-                            </div>
-                        </div>
-                    </article>
+                        </article>
 
-                    <article class="bg-brand-card p-8 rounded-2xl border border-brand-border relative fade-in-up">
-                        <i class="fas fa-quote-left text-4xl text-brand-border absolute top-6 left-6 opacity-50"></i>
-                        <p class="text-gray-300 italic relative z-10 mb-6 mt-4 pt-2">"As a startup, budget was tight, but we needed a premium look. Falconix delivered a stunning website that looks like it cost 5x more. The booking system works flawlessly."</p>
-                        <div class="flex items-center">
-                            <div class="w-12 h-12 bg-brand-dark rounded-full flex items-center justify-center border border-brand-border">
-                                <span class="text-brand-accentLight font-bold">A</span>
+                        <article class="testimonial-slide absolute inset-0 bg-brand-card p-8 md:p-12 rounded-2xl border border-brand-border opacity-0 z-0 transition-opacity duration-1000 shadow-2xl flex flex-col justify-center">
+                            <i class="fas fa-quote-left text-4xl text-brand-border absolute top-6 left-6 md:top-8 md:left-8 opacity-30"></i>
+                            <p class="text-gray-300 italic relative z-10 mb-8 mt-4 text-lg md:text-xl leading-relaxed">"As a startup, budget was tight, but we needed a premium look. Falconix delivered a stunning website that looks like it cost 5x more. The booking system works flawlessly."</p>
+                            <div class="flex items-center">
+                                <div class="w-14 h-14 bg-brand-dark rounded-full flex items-center justify-center border-2 border-brand-accent shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+                                    <span class="text-brand-accentLight font-bold text-xl">A</span>
+                                </div>
+                                <div class="ml-4">
+                                    <h5 class="text-white font-bold text-lg">Amit Patel</h5>
+                                    <p class="text-brand-accent text-sm">Founder, Jubilix</p>
+                                </div>
                             </div>
-                            <div class="ml-4">
-                                <h5 class="text-white font-bold">Amit Patel</h5>
-                                <p class="text-brand-accent text-xs">Founder, Jubilix</p>
+                        </article>
+
+                        <article class="testimonial-slide absolute inset-0 bg-brand-card p-8 md:p-12 rounded-2xl border border-brand-border opacity-0 z-0 transition-opacity duration-1000 shadow-2xl flex flex-col justify-center">
+                            <i class="fas fa-quote-left text-4xl text-brand-border absolute top-6 left-6 md:top-8 md:left-8 opacity-30"></i>
+                            <p class="text-gray-300 italic relative z-10 mb-8 mt-4 text-lg md:text-xl leading-relaxed">"The communication was fantastic from day one. They took my messy ideas and turned them into a clean, lightning-fast digital storefront. Our organic traffic is steadily growing!"</p>
+                            <div class="flex items-center">
+                                <div class="w-14 h-14 bg-brand-dark rounded-full flex items-center justify-center border-2 border-brand-accent shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+                                    <span class="text-brand-accentLight font-bold text-xl">S</span>
+                                </div>
+                                <div class="ml-4">
+                                    <h5 class="text-white font-bold text-lg">Sneha Verma</h5>
+                                    <p class="text-brand-accent text-sm">Local Business Owner</p>
+                                </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </div>
+                    
+                    <div class="flex justify-center items-center gap-3 mt-8">
+                        <button class="w-3 h-3 rounded-full bg-brand-accent transition-colors testimonial-dot" aria-label="View slide 1"></button>
+                        <button class="w-3 h-3 rounded-full bg-brand-border hover:bg-brand-accentLight transition-colors testimonial-dot" aria-label="View slide 2"></button>
+                        <button class="w-3 h-3 rounded-full bg-brand-border hover:bg-brand-accentLight transition-colors testimonial-dot" aria-label="View slide 3"></button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -762,23 +805,25 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <article class="bg-brand-dark border-t-2 border-t-brand-border border-x border-b border-brand-border rounded-2xl p-8 flex flex-col relative fade-in-up shadow-[0_5px_15px_rgba(0,0,0,0.3)]">
-                        <h4 class="text-xl font-bold text-white mb-2 relative z-10">Basic</h4>
-                        <p class="text-gray-400 text-sm mb-6 relative z-10">Perfect for establishing an online footprint.</p>
-                        <div class="mb-6 relative z-10">
-                            <span class="text-4xl font-bold text-white">₹3k - ₹5k</span>
+                    <article class="relative fade-in-up h-full shadow-[0_5px_15px_rgba(0,0,0,0.3)]">
+                        <div class="tilt-card bg-brand-dark border-t-2 border-t-brand-border border-x border-b border-brand-border rounded-2xl p-8 flex flex-col h-full relative z-10">
+                            <h4 class="text-xl font-bold text-white mb-2 relative z-10">Basic</h4>
+                            <p class="text-gray-400 text-sm mb-6 relative z-10">Perfect for establishing an online footprint.</p>
+                            <div class="mb-6 relative z-10">
+                                <span class="text-4xl font-bold text-white">₹3k - ₹5k</span>
+                            </div>
+                            <ul class="space-y-4 mb-8 flex-1 relative z-10">
+                                <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-gray-500 mr-3"></i> 1-3 Page Static Website</li>
+                                <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-gray-500 mr-3"></i> Mobile Responsive Design</li>
+                                <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-gray-500 mr-3"></i> Contact Form Integration</li>
+                                <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-gray-500 mr-3"></i> Basic Speed Optimization</li>
+                            </ul>
+                            <a href="#contact" onclick="document.getElementById('serviceInterest').value='basic';" class="relative z-10 w-full block text-center bg-transparent border border-brand-border text-white py-3 rounded-xl font-semibold transition-colors hover:bg-brand-border hover:text-white">Choose Basic</a>
                         </div>
-                        <ul class="space-y-4 mb-8 flex-1 relative z-10">
-                            <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-gray-500 mr-3"></i> 1-3 Page Static Website</li>
-                            <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-gray-500 mr-3"></i> Mobile Responsive Design</li>
-                            <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-gray-500 mr-3"></i> Contact Form Integration</li>
-                            <li class="flex items-center text-gray-300 text-sm"><i class="fas fa-check text-gray-500 mr-3"></i> Basic Speed Optimization</li>
-                        </ul>
-                        <a href="#contact" onclick="document.getElementById('serviceInterest').value='basic';" class="relative z-10 w-full block text-center bg-transparent border border-brand-border text-white py-3 rounded-xl font-semibold transition-colors hover:bg-brand-border hover:text-white">Choose Basic</a>
                     </article>
 
                     <article class="relative fade-in-up h-full transform md:-translate-y-4">
-                        <div class="bg-gradient-to-br from-blue-900/10 to-brand-dark border-t-4 border-t-brand-accent border-x border-b border-brand-border rounded-2xl p-8 flex flex-col h-full shadow-[0_15px_35px_rgba(59,130,246,0.1)] relative shimmer-effect shimmer-standard">
+                        <div class="tilt-card bg-gradient-to-br from-blue-900/10 to-brand-dark border-t-4 border-t-brand-accent border-x border-b border-brand-border rounded-2xl p-8 flex flex-col h-full shadow-[0_15px_35px_rgba(59,130,246,0.1)] relative shimmer-effect shimmer-standard z-10">
                             <h4 class="text-xl font-bold text-white mb-2 relative z-10">Standard</h4>
                             <p class="text-gray-400 text-sm mb-6 relative z-10">Ideal for growing businesses needing clients.</p>
                             <div class="mb-6 relative z-10">
@@ -796,12 +841,10 @@
                         <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-brand text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wide z-30 shadow-lg pointer-events-none">Most Popular</div>
                     </article>
 
-                    <article class="relative fade-in-up h-full transform md:-translate-y-2 hover:-translate-y-4 transition-transform duration-300">
+                    <article class="relative fade-in-up h-full transform transition-transform duration-300">
                         <div class="absolute inset-0 bg-gradient-premium rounded-2xl blur-xl opacity-30"></div>
-                        
-                        <div class="bg-brand-dark border-x border-b border-brand-border rounded-2xl p-8 flex flex-col h-full relative shimmer-effect shadow-2xl overflow-hidden">
+                        <div class="tilt-card bg-brand-dark border-x border-b border-brand-border rounded-2xl p-8 flex flex-col h-full relative shimmer-effect shadow-2xl overflow-hidden z-10">
                             <div class="absolute top-0 left-0 w-full h-1 bg-gradient-premium z-20"></div>
-                            
                             <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/10 via-purple-600/5 to-brand-accent/10 rounded-2xl pointer-events-none z-0"></div>
                             
                             <h4 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-premium mb-2 relative z-10">Premium</h4>
