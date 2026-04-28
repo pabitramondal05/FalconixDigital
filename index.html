@@ -207,6 +207,12 @@
             background: linear-gradient(to right, transparent, rgba(59, 130, 246, 0.15), transparent);
             animation: shimmer 3.5s infinite linear 1.5s;
         }
+
+        .custom-scrollbar::-webkit-scrollbar { width: 8px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #0B1120; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #3B82F6; border-radius: 4px; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="font-body antialiased overflow-x-hidden">
@@ -574,51 +580,78 @@
                     <p class="text-gray-400">Take a look at some of the recent high-converting websites we've launched.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <article class="group rounded-2xl overflow-hidden border border-brand-border bg-brand-card fade-in-up flex flex-col h-full">
-                        <div class="h-64 bg-[#111827] relative overflow-hidden">
-                            <img src="anjaneya-pramana.png" alt="Anjaneya Pramana Website" loading="lazy" class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent opacity-90 pointer-events-none"></div>
-                        </div>
-                        <div class="p-6 relative flex flex-col flex-grow">
-                            <div class="mb-auto">
-                                <span class="bg-indigo-500/20 text-indigo-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Organization</span>
-                                <h4 class="text-xl font-bold text-white mt-4 mb-2">Anjaneya Pramana</h4>
-                                <p class="text-gray-400 text-sm mb-6">A serene and professional digital platform built for the Anjaneya Pramana organization.</p>
-                            </div>
-                            <a href="https://anjaneyapramana.com/" target="_blank" rel="noopener noreferrer" class="text-brand-accentLight hover:text-white font-semibold text-sm flex items-center transition-colors mt-auto pt-4">Live Demo <i class="fas fa-external-link-alt ml-2 text-xs"></i></a>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 max-w-6xl mx-auto fade-in-up auto-rows-[150px] md:auto-rows-[200px] grid-flow-dense">
+                    
+                    <article class="group relative overflow-hidden rounded-2xl border border-brand-border bg-brand-card cursor-pointer portfolio-img-container shadow-lg col-span-2 row-span-2" data-full-img="wedding1.jpeg">
+                        <img src="wedding1.jpeg" alt="Wedding Portfolio 1" loading="lazy" class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                            <span class="bg-brand-accent text-white px-4 md:px-6 py-2 md:py-3 rounded-full text-xs md:text-sm font-bold shadow-[0_0_20px_rgba(59,130,246,0.6)] transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 flex items-center"><i class="fas fa-expand-arrows-alt mr-2 text-base md:text-lg"></i>View Full</span>
                         </div>
                     </article>
 
-                    <article class="group rounded-2xl overflow-hidden border border-brand-border bg-brand-card fade-in-up flex flex-col h-full">
-                        <div class="h-64 bg-[#111827] relative overflow-hidden">
-                            <img src="physiotherapy-kgp.png" alt="Kharagpur Physiotherapy Website" loading="lazy" class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent opacity-90 pointer-events-none"></div>
-                        </div>
-                        <div class="p-6 relative flex flex-col flex-grow">
-                            <div class="mb-auto">
-                                <span class="bg-teal-500/20 text-teal-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Healthcare</span>
-                                <h4 class="text-xl font-bold text-white mt-4 mb-2">Kharagpur Physiotherapy</h4>
-                                <p class="text-gray-400 text-sm mb-6">A dedicated healthcare clinic website with clear service outlines and patient booking features.</p>
-                            </div>
-                            <a href="https://kharagpurphysiotherapy.in/" target="_blank" rel="noopener noreferrer" class="text-brand-accentLight hover:text-white font-semibold text-sm flex items-center transition-colors mt-auto pt-4">Live Demo <i class="fas fa-external-link-alt ml-2 text-xs"></i></a>
+                    <article class="group relative overflow-hidden rounded-2xl border border-brand-border bg-brand-card cursor-pointer portfolio-img-container shadow-lg col-span-1 row-span-1" data-full-img="wedding2.jpeg">
+                        <img src="wedding2.jpeg" alt="Wedding Portfolio 2" loading="lazy" class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                            <span class="bg-brand-accent text-white px-4 md:px-6 py-2 md:py-3 rounded-full text-xs md:text-sm font-bold shadow-[0_0_20px_rgba(59,130,246,0.6)] transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 flex items-center"><i class="fas fa-expand-arrows-alt mr-2 text-base md:text-lg"></i>View Full</span>
                         </div>
                     </article>
 
-                    <article class="group rounded-2xl overflow-hidden border border-brand-border bg-brand-card fade-in-up flex flex-col h-full">
-                        <div class="h-64 bg-[#111827] relative overflow-hidden">
-                            <img src="gully-scorer.png" alt="Gully Scorer Web App" loading="lazy" class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700">
-                            <div class="absolute inset-0 bg-gradient-to-t from-brand-card via-transparent to-transparent opacity-90 pointer-events-none"></div>
-                        </div>
-                        <div class="p-6 relative flex flex-col flex-grow">
-                            <div class="mb-auto">
-                                <span class="bg-blue-500/20 text-blue-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Web App</span>
-                                <h4 class="text-xl font-bold text-white mt-4 mb-2">Gully Scorer</h4>
-                                <p class="text-gray-400 text-sm mb-6">A dynamic web application designed for scoring local cricket matches with real-time tracking.</p>
-                            </div>
-                            <a href="https://gullyscorer.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-brand-accentLight hover:text-white font-semibold text-sm flex items-center transition-colors mt-auto pt-4">Live Demo <i class="fas fa-external-link-alt ml-2 text-xs"></i></a>
+                    <article class="group relative overflow-hidden rounded-2xl border border-brand-border bg-brand-card cursor-pointer portfolio-img-container shadow-lg col-span-1 row-span-2" data-full-img="wedding3.jpeg">
+                        <img src="wedding3.jpeg" alt="Wedding Portfolio 3" loading="lazy" class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                            <span class="bg-brand-accent text-white px-4 md:px-6 py-2 md:py-3 rounded-full text-xs md:text-sm font-bold shadow-[0_0_20px_rgba(59,130,246,0.6)] transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 flex items-center"><i class="fas fa-expand-arrows-alt mr-2 text-base md:text-lg"></i>View Full</span>
                         </div>
                     </article>
+
+                    <article class="group relative overflow-hidden rounded-2xl border border-brand-border bg-brand-card cursor-pointer portfolio-img-container shadow-lg col-span-1 row-span-1" data-full-img="lawfirm1.jpeg">
+                        <img src="lawfirm1.jpeg" alt="Law Firm Portfolio 1" loading="lazy" class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                            <span class="bg-brand-accent text-white px-4 md:px-6 py-2 md:py-3 rounded-full text-xs md:text-sm font-bold shadow-[0_0_20px_rgba(59,130,246,0.6)] transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 flex items-center"><i class="fas fa-expand-arrows-alt mr-2 text-base md:text-lg"></i>View Full</span>
+                        </div>
+                    </article>
+
+                    <article class="group relative overflow-hidden rounded-2xl border border-brand-border bg-brand-card cursor-pointer portfolio-img-container shadow-lg col-span-2 md:col-span-1 row-span-1" data-full-img="lawfirm2.jpeg">
+                        <img src="lawfirm2.jpeg" alt="Law Firm Portfolio 2" loading="lazy" class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                            <span class="bg-brand-accent text-white px-4 md:px-6 py-2 md:py-3 rounded-full text-xs md:text-sm font-bold shadow-[0_0_20px_rgba(59,130,246,0.6)] transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 flex items-center"><i class="fas fa-expand-arrows-alt mr-2 text-base md:text-lg"></i>View Full</span>
+                        </div>
+                    </article>
+
+                    <article class="group relative overflow-hidden rounded-2xl border border-brand-border bg-brand-card cursor-pointer portfolio-img-container shadow-lg col-span-1 md:col-span-2 row-span-2" data-full-img="mehendi.jpeg">
+                        <img src="mehendi.jpeg" alt="Mehendi Artist Portfolio" loading="lazy" class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                            <span class="bg-brand-accent text-white px-4 md:px-6 py-2 md:py-3 rounded-full text-xs md:text-sm font-bold shadow-[0_0_20px_rgba(59,130,246,0.6)] transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 flex items-center"><i class="fas fa-expand-arrows-alt mr-2 text-base md:text-lg"></i>View Full</span>
+                        </div>
+                    </article>
+
+                    <article class="group relative overflow-hidden rounded-2xl border border-brand-border bg-brand-card cursor-pointer portfolio-img-container shadow-lg col-span-1 row-span-1" data-full-img="drclinic1.jpeg">
+                        <img src="drclinic1.jpeg" alt="Doctor Clinic Portfolio 1" loading="lazy" class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                            <span class="bg-brand-accent text-white px-4 md:px-6 py-2 md:py-3 rounded-full text-xs md:text-sm font-bold shadow-[0_0_20px_rgba(59,130,246,0.6)] transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 flex items-center"><i class="fas fa-expand-arrows-alt mr-2 text-base md:text-lg"></i>View Full</span>
+                        </div>
+                    </article>
+
+                    <article class="group relative overflow-hidden rounded-2xl border border-brand-border bg-brand-card cursor-pointer portfolio-img-container shadow-lg col-span-1 row-span-1" data-full-img="drclinic2.jpeg">
+                        <img src="drclinic2.jpeg" alt="Doctor Clinic Portfolio 2" loading="lazy" class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                            <span class="bg-brand-accent text-white px-4 md:px-6 py-2 md:py-3 rounded-full text-xs md:text-sm font-bold shadow-[0_0_20px_rgba(59,130,246,0.6)] transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 flex items-center"><i class="fas fa-expand-arrows-alt mr-2 text-base md:text-lg"></i>View Full</span>
+                        </div>
+                    </article>
+
+                    <article class="group relative overflow-hidden rounded-2xl border border-brand-border bg-brand-card cursor-pointer portfolio-img-container shadow-lg col-span-2 row-span-2" data-full-img="drclinic3.jpeg">
+                        <img src="drclinic3.jpeg" alt="Doctor Clinic Portfolio 3" loading="lazy" class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                            <span class="bg-brand-accent text-white px-4 md:px-6 py-2 md:py-3 rounded-full text-xs md:text-sm font-bold shadow-[0_0_20px_rgba(59,130,246,0.6)] transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 flex items-center"><i class="fas fa-expand-arrows-alt mr-2 text-base md:text-lg"></i>View Full</span>
+                        </div>
+                    </article>
+
+                    <article class="group relative overflow-hidden rounded-2xl border border-brand-border bg-brand-card cursor-pointer portfolio-img-container shadow-lg col-span-2 md:col-span-1 lg:col-span-2 row-span-1" data-full-img="crypto1.jpeg">
+                        <img src="crypto1.jpeg" alt="Crypto Portfolio 1" loading="lazy" class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                            <span class="bg-brand-accent text-white px-4 md:px-6 py-2 md:py-3 rounded-full text-xs md:text-sm font-bold shadow-[0_0_20px_rgba(59,130,246,0.6)] transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 flex items-center"><i class="fas fa-expand-arrows-alt mr-2 text-base md:text-lg"></i>View Full</span>
+                        </div>
+                    </article>
+
                 </div>
             </div>
         </section>
@@ -1047,6 +1080,13 @@
             </div>
         </div>
     </footer>
+
+    <div id="image-modal" class="fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-sm flex items-center justify-center p-4 md:p-8 opacity-0 transition-opacity duration-300">
+        <button id="close-modal" class="absolute top-4 right-4 md:top-8 md:right-8 text-white text-3xl hover:text-brand-accent transition-colors z-[110] w-12 h-12 bg-brand-dark/50 rounded-full flex items-center justify-center border border-brand-border backdrop-blur-md"><i class="fas fa-times"></i></button>
+        <div class="w-full max-w-5xl h-[85vh] md:h-[90vh] overflow-y-auto rounded-xl border-2 border-brand-border bg-brand-dark custom-scrollbar shadow-2xl relative">
+            <img id="modal-image" src="" class="w-full h-auto object-cover" alt="Full Work Demo">
+        </div>
+    </div>
 
     <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
         <a href="tel:+918637028337" aria-label="Call Us directly" class="fab-btn md:hidden w-14 h-14 bg-brand-accent text-white rounded-full flex items-center justify-center text-2xl shadow-lg hover:scale-110 transition-transform">
