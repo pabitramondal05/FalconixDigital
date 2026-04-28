@@ -102,6 +102,14 @@ window.addEventListener('scroll', () => {
     } else {
         nav.classList.remove('shadow-lg');
     }
+    
+    const scrollProgress = document.getElementById('scroll-progress');
+    if (scrollProgress) {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        scrollProgress.style.width = scrollPercent + '%';
+    }
 });
 
 const viewAllDesktop = document.getElementById('viewAllDesktop');
@@ -352,5 +360,123 @@ if (modal && modalImg && closeModal && imgContainers) {
             modalImg.src = '';
             document.body.style.overflow = 'auto';
         }, 300);
+    }
+}
+
+const counters = document.querySelectorAll('.counter-value');
+const counterObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const target = +entry.target.getAttribute('data-target');
+            let count = 0;
+            const duration = 2000; 
+            const increment = target / (duration / 16); 
+
+            const updateCount = () => {
+                count += increment;
+                if (count < target) {
+                    entry.target.innerText = Math.ceil(count);
+                    requestAnimationFrame(updateCount);
+                } else {
+                    entry.target.innerText = target;
+                }
+            };
+            updateCount();
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+counters.forEach(counter => counterObserver.observe(counter));
+
+const tiltCards = document.querySelectorAll('.tilt-card');
+tiltCards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = ((y - centerY) / centerY) * -8; 
+        const rotateY = ((x - centerX) / centerX) * 8;
+        
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+        card.style.transition = 'transform 0.1s ease-out';
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+        card.style.transition = 'transform 0.5s ease-out';
+    });
+});
+
+const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+const testimonialDots = document.querySelectorAll('.testimonial-dot');
+let currentTestimonialSlide = 0;
+let testimonialInterval;
+
+if (testimonialSlides.length > 0) {
+    function showTestimonial(index) {
+        testimonialSlides.forEach(slide => {
+            slide.classList.remove('opacity-100', 'z-10');
+            slide.classList.add('opacity-0', 'z-0');
+        });
+        testimonialDots.forEach(dot => {
+            dot.classList.remove('bg-brand-accent');
+            dot.classList.add('bg-brand-border');
+        });
+        
+        testimonialSlides[index].classList.remove('opacity-0', 'z-0');
+        testimonialSlides[index].classList.add('opacity-100', 'z-10');
+        testimonialDots[index].classList.remove('bg-brand-border');
+        testimonialDots[index].classList.add('bg-brand-accent');
+        currentTestimonialSlide = index;
+    }
+
+    function nextTestimonial() {
+        let next = (currentTestimonialSlide + 1) % testimonialSlides.length;
+        showTestimonial(next);
+    }
+
+    testimonialInterval = setInterval(nextTestimonial, 5000); 
+
+    testimonialDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            clearInterval(testimonialInterval); 
+            showTestimonial(index);
+            testimonialInterval = setInterval(nextTestimonial, 5000);
+        });
+    });
+}
+
+const cursor = document.getElementById('custom-cursor');
+const cursorGlow = document.getElementById('custom-cursor-glow');
+
+if (cursor && cursorGlow) {
+    if (window.matchMedia("(pointer: fine)").matches) {
+        window.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            setTimeout(() => {
+                cursorGlow.style.left = e.clientX + 'px';
+                cursorGlow.style.top = e.clientY + 'px';
+            }, 50);
+        });
+
+        const hoverElements = document.querySelectorAll('a, button, .portfolio-img-container, .tilt-card, details summary, input, select, textarea');
+        
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('custom-cursor-active');
+                cursorGlow.classList.add('custom-glow-active');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('custom-cursor-active');
+                cursorGlow.classList.remove('custom-glow-active');
+            });
+        });
     }
 }
