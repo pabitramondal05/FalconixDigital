@@ -208,35 +208,29 @@
             animation: shimmer 3.5s infinite linear 1.5s;
         }
 
+        @keyframes slide-track {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .slide-track {
+            display: flex;
+            width: max-content;
+            animation: slide-track 30s linear infinite;
+        }
+        .slide-track:hover {
+            animation-play-state: paused;
+        }
+
         .custom-scrollbar::-webkit-scrollbar { width: 8px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: #0B1120; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #3B82F6; border-radius: 4px; }
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
-        @media (pointer: fine) {
-            body, a, button, input, select, textarea, .portfolio-img-container, .tilt-card, details summary {
-                cursor: none !important;
-            }
-            .custom-cursor-active {
-                transform: translate(-50%, -50%) scale(2.5) !important;
-                background-color: transparent !important;
-                border: 2px solid #60A5FA !important;
-                box-shadow: 0 0 15px rgba(96, 165, 250, 0.8) !important;
-            }
-            .custom-glow-active {
-                transform: translate(-50%, -50%) scale(1.5) !important;
-                opacity: 0.8 !important;
-            }
-        }
     </style>
 </head>
 <body class="font-body antialiased overflow-x-hidden">
 
-    <div id="scroll-progress" class="fixed top-0 left-0 h-1 w-0 bg-gradient-to-r from-blue-500 via-cyan-400 to-brand-accentLight z-[120] shadow-[0_0_10px_rgba(59,130,246,0.8)] transition-all duration-75"></div>
-
-    <div id="custom-cursor" class="fixed top-0 left-0 w-3 h-3 bg-brand-accent rounded-full pointer-events-none z-[130] transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-100 ease-out shadow-[0_0_10px_rgba(59,130,246,0.8)] hidden md:block mix-blend-screen"></div>
-    <div id="custom-cursor-glow" class="fixed top-0 left-0 w-10 h-10 bg-brand-accent/30 rounded-full pointer-events-none z-[129] transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-300 ease-out blur-md hidden md:block mix-blend-screen"></div>
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gradient-brand z-[100] w-0 transition-all duration-75"></div>
 
     <header>
         <nav class="fixed w-full z-50 bg-brand-dark/80 backdrop-blur-2xl border-b border-brand-border transition-all duration-300" id="navbar">
@@ -290,9 +284,9 @@
         <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center">
             <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-60 w-full h-full"></canvas>
 
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600 rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse z-0"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse z-0" style="animation-delay: 2s;"></div>
-            <div class="absolute top-1/2 left-1/2 w-96 h-96 bg-indigo-600 rounded-full mix-blend-screen filter blur-[120px] opacity-15 animate-pulse z-0" style="animation-delay: 4s;"></div>
+            <div class="parallax-orb absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600 rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse z-0" data-speed="-0.2"></div>
+            <div class="parallax-orb absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse z-0" style="animation-delay: 2s;" data-speed="0.3"></div>
+            <div class="parallax-orb absolute top-1/2 left-1/2 w-96 h-96 bg-indigo-600 rounded-full mix-blend-screen filter blur-[120px] opacity-15 animate-pulse z-0" style="animation-delay: 4s;" data-speed="-0.15"></div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center fade-in-up">
                 
@@ -318,18 +312,43 @@
                         View Portfolio
                     </a>
                 </div>
+                
+                <div class="mt-14 flex flex-wrap justify-center gap-6 md:gap-10 text-xs md:text-sm font-semibold text-gray-400">
+                    <div class="flex items-center gap-2"><i class="fas fa-lock text-emerald-400"></i> 100% SSL Secure</div>
+                    <div class="flex items-center gap-2"><i class="fab fa-google text-red-400"></i> Google Verified Developer</div>
+                    <div class="flex items-center gap-2"><i class="fas fa-star text-yellow-400"></i> 5-Star Rated</div>
+                    <div class="flex items-center gap-2"><i class="fas fa-bolt text-brand-accentLight"></i> Lightning Fast</div>
+                </div>
             </div>
         </section>
 
-        <div class="bg-brand-dark border-b border-brand-border py-8 relative z-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <p class="text-center text-sm font-semibold text-gray-500 uppercase tracking-widest mb-6">Powered by Modern Technologies</p>
-                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-                    <div class="flex items-center gap-2 text-xl font-bold text-white"><i class="fab fa-html5 text-[#E34F26] text-3xl"></i> <span class="hidden sm:inline">HTML5</span></div>
-                    <div class="flex items-center gap-2 text-xl font-bold text-white"><i class="fab fa-css3-alt text-[#1572B6] text-3xl"></i> <span class="hidden sm:inline">Tailwind</span></div>
-                    <div class="flex items-center gap-2 text-xl font-bold text-white"><i class="fab fa-js text-[#F7DF1E] text-3xl"></i> <span class="hidden sm:inline">JavaScript</span></div>
-                    <div class="flex items-center gap-2 text-xl font-bold text-white"><i class="fab fa-react text-[#61DAFB] text-3xl"></i> <span class="hidden sm:inline">React</span></div>
-                    <div class="flex items-center gap-2 text-xl font-bold text-white"><i class="fab fa-node-js text-[#339933] text-3xl"></i> <span class="hidden sm:inline">Node.js</span></div>
+        <div class="bg-brand-dark border-b border-brand-border py-10 relative z-20 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
+                <p class="text-center text-sm font-semibold text-gray-500 uppercase tracking-widest">Powered by Modern Technologies</p>
+            </div>
+            
+            <div class="relative overflow-hidden w-full before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-16 md:before:w-32 before:bg-gradient-to-r before:from-brand-dark before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-16 md:after:w-32 after:bg-gradient-to-l after:from-brand-dark after:to-transparent">
+                <div class="slide-track gap-12 md:gap-16 items-center px-6">
+                    
+                    <div class="flex items-center gap-3 text-xl font-bold text-gray-300 hover:text-white transition-colors cursor-default"><i class="fab fa-html5 text-[#E34F26] text-3xl md:text-4xl"></i> <span>HTML5</span></div>
+                    <div class="flex items-center gap-3 text-xl font-bold text-gray-300 hover:text-white transition-colors cursor-default"><i class="fab fa-css3-alt text-[#1572B6] text-3xl md:text-4xl"></i> <span>Tailwind</span></div>
+                    <div class="flex items-center gap-3 text-xl font-bold text-gray-300 hover:text-white transition-colors cursor-default"><i class="fab fa-js text-[#F7DF1E] text-3xl md:text-4xl"></i> <span>JavaScript</span></div>
+                    <div class="flex items-center gap-3 text-xl font-bold text-gray-300 hover:text-white transition-colors cursor-default"><i class="fab fa-react text-[#61DAFB] text-3xl md:text-4xl"></i> <span>React</span></div>
+                    <div class="flex items-center gap-3 text-xl font-bold text-gray-300 hover:text-white transition-colors cursor-default"><i class="fab fa-node-js text-[#339933] text-3xl md:text-4xl"></i> <span>Node.js</span></div>
+                    <div class="flex items-center gap-3 text-xl font-bold text-gray-300 hover:text-white transition-colors cursor-default"><i class="fas fa-fire text-[#FFCA28] text-3xl md:text-4xl"></i> <span>Firebase</span></div>
+                    <div class="flex items-center gap-3 text-xl font-bold text-gray-300 hover:text-white transition-colors cursor-default"><i class="fas fa-database text-[#3ECF8E] text-3xl md:text-4xl"></i> <span>Supabase</span></div>
+                    <div class="flex items-center gap-3 text-xl font-bold text-gray-300 hover:text-white transition-colors cursor-default"><i class="fab fa-git-alt text-[#F05032] text-3xl md:text-4xl"></i> <span>Git</span></div>
+                    <div class="flex items-center gap-3 text-xl font-bold text-gray-300 hover:text-white transition-colors cursor-default"><i class="fab fa-figma text-[#F24E1E] text-3xl md:text-4xl"></i> <span>Figma</span></div>
+                    
+                    <div class="flex items-center gap-3 text-xl font-bold text-gray-300 hover:text-white transition-colors cursor-default"><i class="fab fa-html5 text-[#E34F26] text-3xl md:text-4xl"></i> <span>HTML5</span></div>
+                    <div class="flex items-center gap-3 text-xl font-bold text-gray-300 hover:text-white transition-colors cursor-default"><i class="fab fa-css3-alt text-[#1572B6] text-3xl md:text-4xl"></i> <span>Tailwind</span></div>
+                    <div class="flex items-center gap-3 text-xl font-bold text-gray-300 hover:text-white transition-colors cursor-default"><i class="fab fa-js text-[#F7DF1E] text-3xl md:text-4xl"></i> <span>JavaScript</span></div>
+                    <div class="flex items-center gap-3 text-xl font-bold text-gray-300 hover:text-white transition-colors cursor-default"><i class="fab fa-react text-[#61DAFB] text-3xl md:text-4xl"></i> <span>React</span></div>
+                    <div class="flex items-center gap-3 text-xl font-bold text-gray-300 hover:text-white transition-colors cursor-default"><i class="fab fa-node-js text-[#339933] text-3xl md:text-4xl"></i> <span>Node.js</span></div>
+                    <div class="flex items-center gap-3 text-xl font-bold text-gray-300 hover:text-white transition-colors cursor-default"><i class="fas fa-fire text-[#FFCA28] text-3xl md:text-4xl"></i> <span>Firebase</span></div>
+                    <div class="flex items-center gap-3 text-xl font-bold text-gray-300 hover:text-white transition-colors cursor-default"><i class="fas fa-database text-[#3ECF8E] text-3xl md:text-4xl"></i> <span>Supabase</span></div>
+                    <div class="flex items-center gap-3 text-xl font-bold text-gray-300 hover:text-white transition-colors cursor-default"><i class="fab fa-git-alt text-[#F05032] text-3xl md:text-4xl"></i> <span>Git</span></div>
+                    <div class="flex items-center gap-3 text-xl font-bold text-gray-300 hover:text-white transition-colors cursor-default"><i class="fab fa-figma text-[#F24E1E] text-3xl md:text-4xl"></i> <span>Figma</span></div>
                 </div>
             </div>
         </div>
@@ -483,8 +502,10 @@
                     <p class="text-gray-400">A streamlined approach from initial idea to final launch and beyond.</p>
                 </div>
 
-                <div class="relative max-w-4xl mx-auto before:absolute before:inset-0 before:left-5 before:-translate-x-px md:before:left-1/2 md:before:-translate-x-1/2 before:h-full before:w-1 before:bg-gradient-to-b before:from-transparent before:via-gray-700 before:to-transparent space-y-12 md:space-y-8">
+                <div id="process-container" class="relative max-w-4xl mx-auto before:absolute before:inset-0 before:left-5 before:-translate-x-px md:before:left-1/2 md:before:-translate-x-1/2 before:h-full before:w-1 before:bg-gray-800/50 space-y-12 md:space-y-8 pb-4">
                     
+                    <div id="process-progress" class="absolute top-0 left-5 md:left-1/2 w-1 -translate-x-px md:-translate-x-1/2 bg-gradient-to-b from-brand-accentLight via-indigo-500 to-purple-600 shadow-[0_0_20px_rgba(59,130,246,0.8)] z-0 rounded-full pointer-events-none transition-all duration-100 ease-out" style="height: 0%;"></div>
+
                     <div class="relative w-full group fade-in-up">
                         <div class="absolute left-5 top-4 md:left-1/2 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border-4 border-brand-card bg-indigo-500 text-white shadow-[0_0_15px_rgba(99,102,241,0.6)] z-10 transition-transform group-hover:scale-110">
                             <i class="fas fa-comments text-sm"></i>
@@ -802,6 +823,13 @@
                     <h2 class="text-brand-accentLight font-semibold tracking-wider uppercase mb-2">Simple Pricing</h2>
                     <h3 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6">Invest in Your Growth</h3>
                     <p class="text-gray-400">Clear, transparent packages designed to filter out confusion and get straight to value.</p>
+                    
+                    <!-- Trust Badges (Pricing Section) -->
+                    <div class="mt-8 flex flex-wrap justify-center gap-6 md:gap-8 text-sm font-semibold text-gray-300">
+                        <div class="flex items-center gap-2"><i class="fas fa-shield-alt text-brand-accentLight"></i> No Hidden Fees</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-handshake text-indigo-400"></i> Money-Back Guarantee</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-headset text-purple-400"></i> 1-Month Free Support</div>
+                    </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -992,7 +1020,7 @@
             <canvas class="particle-canvas absolute inset-0 z-0 pointer-events-none opacity-40 w-full h-full"></canvas>
             
             <div class="absolute inset-0 flex justify-center items-center pointer-events-none z-0">
-                <div class="w-full max-w-3xl h-full bg-brand-accent opacity-10 mix-blend-screen filter blur-[100px]"></div>
+                <div class="parallax-orb w-full max-w-3xl h-full bg-brand-accent opacity-10 mix-blend-screen filter blur-[100px]" data-speed="0.1"></div>
             </div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
